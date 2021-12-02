@@ -12,9 +12,7 @@ import { Editor } from "./Editor";
 import { theme as initialTheme } from "../theme";
 
 import { filterTheme } from "../services/themeEditor";
-import BasicLayout from "../previews/landing/layouts/landing";
-import { ThemeProvider } from "@chakra-ui/react";
-import { mockEnv } from "../services/environment/environment";
+import { Preview } from "./Preview";
 
 // import { ThemeProvider } from '@emotion/react'
 // 
@@ -37,11 +35,7 @@ export const MainEditor = () => {
           </Box>
           <Box flexGrow={1} bgColor="white" p={6} borderRadius="md">
             <Heading size="md">Preview</Heading>
-            <Box className="builder-preview">
-              <ThemeProvider theme={theme} cssVarsRoot=".builder-preview">
-                <BasicLayout />
-              </ThemeProvider>
-            </Box>
+            <Preview theme={theme}/>
           </Box>
         </Stack>
       </Container>
