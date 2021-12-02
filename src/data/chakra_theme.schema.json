@@ -1,0 +1,4985 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/Fonts",
+    "definitions": {
+        "ChakraTheme": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "direction": {
+                    "type": "string"
+                },
+                "breakpoints": {
+                    "$ref": "#/definitions/Blur"
+                },
+                "zIndices": {
+                    "$ref": "#/definitions/ZIndices"
+                },
+                "radii": {
+                    "$ref": "#/definitions/Radii"
+                },
+                "blur": {
+                    "$ref": "#/definitions/Blur"
+                },
+                "colors": {
+                    "$ref": "#/definitions/Colors"
+                },
+                "letterSpacings": {
+                    "$ref": "#/definitions/LetterSpacings"
+                },
+                "lineHeights": {
+                    "$ref": "#/definitions/LineHeights"
+                },
+                "fontWeights": {
+                    "$ref": "#/definitions/FontWeights"
+                },
+                "fonts": {
+                    "$ref": "#/definitions/Fonts"
+                },
+                "fontSizes": {
+                    "$ref": "#/definitions/FontSizes"
+                },
+                "sizes": {
+                    "$ref": "#/definitions/ChakraThemeSizes"
+                },
+                "shadows": {
+                    "$ref": "#/definitions/Shadows"
+                },
+                "space": {
+                    "$ref": "#/definitions/Space"
+                },
+                "borders": {
+                    "$ref": "#/definitions/Borders"
+                },
+                "transition": {
+                    "$ref": "#/definitions/Transition"
+                },
+                "components": {
+                    "$ref": "#/definitions/Components"
+                },
+                "styles": {
+                    "$ref": "#/definitions/Styles"
+                },
+                "config": {
+                    "$ref": "#/definitions/Config"
+                }
+            },
+            "required": [
+                "blur",
+                "borders",
+                "breakpoints",
+                "colors",
+                "components",
+                "config",
+                "direction",
+                "fontSizes",
+                "fontWeights",
+                "fonts",
+                "letterSpacings",
+                "lineHeights",
+                "radii",
+                "shadows",
+                "sizes",
+                "space",
+                "styles",
+                "transition",
+                "zIndices"
+            ],
+            "title": "ChakraTheme"
+        },
+        "Blur": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "none": {
+                    "type": "integer"
+                },
+                "sm": {
+                    "type": "string"
+                },
+                "base": {
+                    "type": "string"
+                },
+                "md": {
+                    "type": "string"
+                },
+                "lg": {
+                    "type": "string"
+                },
+                "xl": {
+                    "type": "string"
+                },
+                "2xl": {
+                    "type": "string"
+                },
+                "3xl": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "2xl",
+                "base",
+                "lg",
+                "md",
+                "sm",
+                "xl"
+            ],
+            "title": "Blur"
+        },
+        "Borders": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "none": {
+                    "type": "integer"
+                },
+                "1px": {
+                    "type": "string"
+                },
+                "2px": {
+                    "type": "string"
+                },
+                "4px": {
+                    "type": "string"
+                },
+                "8px": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "1px",
+                "2px",
+                "4px",
+                "8px",
+                "none"
+            ],
+            "title": "Borders"
+        },
+        "Colors": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "transparent": {
+                    "type": "string"
+                },
+                "current": {
+                    "type": "string"
+                },
+                "black": {
+                    "type": "string"
+                },
+                "white": {
+                    "type": "string"
+                },
+                "whiteAlpha": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "string"
+                    }
+                },
+                "blackAlpha": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "string"
+                    }
+                },
+                "gray": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "string"
+                    }
+                },
+                "red": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "string"
+                    }
+                },
+                "orange": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "string"
+                    }
+                },
+                "yellow": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "string"
+                    }
+                },
+                "green": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "string"
+                    }
+                },
+                "teal": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "string"
+                    }
+                },
+                "blue": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "string"
+                    }
+                },
+                "cyan": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "string"
+                    }
+                },
+                "purple": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "string"
+                    }
+                },
+                "pink": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "string"
+                    }
+                },
+                "linkedin": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "string"
+                    }
+                },
+                "facebook": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "string"
+                    }
+                },
+                "messenger": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "string"
+                    }
+                },
+                "whatsapp": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "string"
+                    }
+                },
+                "twitter": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "string"
+                    }
+                },
+                "telegram": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "string"
+                    }
+                },
+                "brand": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": [
+                "black",
+                "blackAlpha",
+                "blue",
+                "brand",
+                "current",
+                "cyan",
+                "facebook",
+                "gray",
+                "green",
+                "linkedin",
+                "messenger",
+                "orange",
+                "pink",
+                "purple",
+                "red",
+                "teal",
+                "telegram",
+                "transparent",
+                "twitter",
+                "whatsapp",
+                "white",
+                "whiteAlpha",
+                "yellow"
+            ],
+            "title": "Colors"
+        },
+        "Components": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "Accordion": {
+                    "$ref": "#/definitions/Accordion"
+                },
+                "Alert": {
+                    "$ref": "#/definitions/Alert"
+                },
+                "Avatar": {
+                    "$ref": "#/definitions/Avatar"
+                },
+                "Badge": {
+                    "$ref": "#/definitions/Badge"
+                },
+                "Breadcrumb": {
+                    "$ref": "#/definitions/Breadcrumb"
+                },
+                "Button": {
+                    "$ref": "#/definitions/ButtonClass"
+                },
+                "Checkbox": {
+                    "$ref": "#/definitions/Checkbox"
+                },
+                "CloseButton": {
+                    "$ref": "#/definitions/CloseButton"
+                },
+                "Code": {
+                    "$ref": "#/definitions/Code"
+                },
+                "Container": {
+                    "$ref": "#/definitions/Container"
+                },
+                "Divider": {
+                    "$ref": "#/definitions/Divider"
+                },
+                "Drawer": {
+                    "$ref": "#/definitions/Drawer"
+                },
+                "Editable": {
+                    "$ref": "#/definitions/Editable"
+                },
+                "Form": {
+                    "$ref": "#/definitions/Form"
+                },
+                "FormLabel": {
+                    "$ref": "#/definitions/FormLabel"
+                },
+                "Heading": {
+                    "$ref": "#/definitions/Heading"
+                },
+                "Input": {
+                    "$ref": "#/definitions/InputClass"
+                },
+                "Kbd": {
+                    "$ref": "#/definitions/Styles"
+                },
+                "Link": {
+                    "$ref": "#/definitions/Link"
+                },
+                "List": {
+                    "$ref": "#/definitions/List"
+                },
+                "Menu": {
+                    "$ref": "#/definitions/Form"
+                },
+                "Modal": {
+                    "$ref": "#/definitions/Modal"
+                },
+                "NumberInput": {
+                    "$ref": "#/definitions/NumberInput"
+                },
+                "PinInput": {
+                    "$ref": "#/definitions/PinInput"
+                },
+                "Popover": {
+                    "$ref": "#/definitions/Form"
+                },
+                "Progress": {
+                    "$ref": "#/definitions/Progress"
+                },
+                "Radio": {
+                    "$ref": "#/definitions/Radio"
+                },
+                "Select": {
+                    "$ref": "#/definitions/Select"
+                },
+                "Skeleton": {
+                    "$ref": "#/definitions/Styles"
+                },
+                "SkipLink": {
+                    "$ref": "#/definitions/Styles"
+                },
+                "Slider": {
+                    "$ref": "#/definitions/Slider"
+                },
+                "Spinner": {
+                    "$ref": "#/definitions/Spinner"
+                },
+                "Stat": {
+                    "$ref": "#/definitions/Stat"
+                },
+                "Switch": {
+                    "$ref": "#/definitions/Switch"
+                },
+                "Table": {
+                    "$ref": "#/definitions/Table"
+                },
+                "Tabs": {
+                    "$ref": "#/definitions/Tabs"
+                },
+                "Tag": {
+                    "$ref": "#/definitions/Tag"
+                },
+                "Textarea": {
+                    "$ref": "#/definitions/Textarea"
+                },
+                "Tooltip": {
+                    "$ref": "#/definitions/Styles"
+                },
+                "FormError": {
+                    "$ref": "#/definitions/Form"
+                }
+            },
+            "required": [
+                "Accordion",
+                "Alert",
+                "Avatar",
+                "Badge",
+                "Breadcrumb",
+                "Button",
+                "Checkbox",
+                "CloseButton",
+                "Code",
+                "Container",
+                "Divider",
+                "Drawer",
+                "Editable",
+                "Form",
+                "FormError",
+                "FormLabel",
+                "Heading",
+                "Input",
+                "Kbd",
+                "Link",
+                "List",
+                "Menu",
+                "Modal",
+                "NumberInput",
+                "PinInput",
+                "Popover",
+                "Progress",
+                "Radio",
+                "Select",
+                "Skeleton",
+                "SkipLink",
+                "Slider",
+                "Spinner",
+                "Stat",
+                "Switch",
+                "Table",
+                "Tabs",
+                "Tag",
+                "Textarea",
+                "Tooltip"
+            ],
+            "title": "Components"
+        },
+        "Accordion": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "parts": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "baseStyle": {
+                    "$ref": "#/definitions/AccordionBaseStyle"
+                }
+            },
+            "required": [
+                "baseStyle",
+                "parts"
+            ],
+            "title": "Accordion"
+        },
+        "AccordionBaseStyle": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "container": {
+                    "$ref": "#/definitions/PurpleContainer"
+                },
+                "button": {
+                    "$ref": "#/definitions/Button"
+                },
+                "panel": {
+                    "$ref": "#/definitions/Panel"
+                },
+                "icon": {
+                    "$ref": "#/definitions/LabelClass"
+                }
+            },
+            "required": [
+                "button",
+                "container",
+                "icon",
+                "panel"
+            ],
+            "title": "AccordionBaseStyle"
+        },
+        "Button": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "transitionProperty": {
+                    "type": "string"
+                },
+                "transitionDuration": {
+                    "type": "string"
+                },
+                "fontSize": {
+                    "type": "string"
+                },
+                "_focus": {
+                    "$ref": "#/definitions/ButtonFocus"
+                },
+                "_hover": {
+                    "$ref": "#/definitions/Hover"
+                },
+                "_disabled": {
+                    "$ref": "#/definitions/ButtonDisabled"
+                },
+                "px": {
+                    "type": "integer"
+                },
+                "py": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "_disabled",
+                "_focus",
+                "_hover",
+                "fontSize",
+                "px",
+                "py",
+                "transitionDuration",
+                "transitionProperty"
+            ],
+            "title": "Button"
+        },
+        "ButtonDisabled": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "opacity": {
+                    "type": "number"
+                },
+                "cursor": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "cursor",
+                "opacity"
+            ],
+            "title": "ButtonDisabled"
+        },
+        "ButtonFocus": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "boxShadow": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "boxShadow"
+            ],
+            "title": "ButtonFocus"
+        },
+        "Hover": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "bg": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "bg"
+            ],
+            "title": "Hover"
+        },
+        "PurpleContainer": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "borderTopWidth": {
+                    "type": "string"
+                },
+                "borderColor": {
+                    "type": "string"
+                },
+                "_last": {
+                    "$ref": "#/definitions/ContainerLast"
+                }
+            },
+            "required": [
+                "_last",
+                "borderColor",
+                "borderTopWidth"
+            ],
+            "title": "PurpleContainer"
+        },
+        "ContainerLast": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "borderBottomWidth": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "borderBottomWidth"
+            ],
+            "title": "ContainerLast"
+        },
+        "LabelClass": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "fontSize": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "fontSize"
+            ],
+            "title": "LabelClass"
+        },
+        "Panel": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "pt": {
+                    "type": "integer"
+                },
+                "px": {
+                    "type": "integer"
+                },
+                "pb": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "pb",
+                "pt",
+                "px"
+            ],
+            "title": "Panel"
+        },
+        "Alert": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "parts": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "baseStyle": {
+                    "$ref": "#/definitions/AlertBaseStyle"
+                },
+                "variants": {
+                    "$ref": "#/definitions/Styles"
+                },
+                "defaultProps": {
+                    "$ref": "#/definitions/AlertDefaultProps"
+                }
+            },
+            "required": [
+                "baseStyle",
+                "defaultProps",
+                "parts",
+                "variants"
+            ],
+            "title": "Alert"
+        },
+        "AlertBaseStyle": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "container": {
+                    "$ref": "#/definitions/FluffyContainer"
+                },
+                "title": {
+                    "$ref": "#/definitions/Title"
+                },
+                "description": {
+                    "$ref": "#/definitions/Description"
+                },
+                "icon": {
+                    "$ref": "#/definitions/PurpleIcon"
+                }
+            },
+            "required": [
+                "container",
+                "description",
+                "icon",
+                "title"
+            ],
+            "title": "AlertBaseStyle"
+        },
+        "FluffyContainer": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "px": {
+                    "type": "integer"
+                },
+                "py": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "px",
+                "py"
+            ],
+            "title": "FluffyContainer"
+        },
+        "Description": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "lineHeight": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "lineHeight"
+            ],
+            "title": "Description"
+        },
+        "PurpleIcon": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "flexShrink": {
+                    "type": "integer"
+                },
+                "marginEnd": {
+                    "type": "integer"
+                },
+                "w": {
+                    "type": "integer"
+                },
+                "h": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "flexShrink",
+                "h",
+                "marginEnd",
+                "w"
+            ],
+            "title": "PurpleIcon"
+        },
+        "Title": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "fontWeight": {
+                    "type": "string"
+                },
+                "lineHeight": {
+                    "type": "integer"
+                },
+                "marginEnd": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "fontWeight",
+                "lineHeight",
+                "marginEnd"
+            ],
+            "title": "Title"
+        },
+        "AlertDefaultProps": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "variant": {
+                    "type": "string"
+                },
+                "colorScheme": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "colorScheme",
+                "variant"
+            ],
+            "title": "AlertDefaultProps"
+        },
+        "Styles": {
+            "type": "object",
+            "additionalProperties": false,
+            "title": "Styles"
+        },
+        "Avatar": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "parts": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "sizes": {
+                    "$ref": "#/definitions/AvatarSizes"
+                },
+                "defaultProps": {
+                    "$ref": "#/definitions/AvatarDefaultProps"
+                }
+            },
+            "required": [
+                "defaultProps",
+                "parts",
+                "sizes"
+            ],
+            "title": "Avatar"
+        },
+        "AvatarDefaultProps": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "size": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "size"
+            ],
+            "title": "AvatarDefaultProps"
+        },
+        "AvatarSizes": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "2xs": {
+                    "$ref": "#/definitions/2XsClass"
+                },
+                "xs": {
+                    "$ref": "#/definitions/2XsClass"
+                },
+                "sm": {
+                    "$ref": "#/definitions/2XsClass"
+                },
+                "md": {
+                    "$ref": "#/definitions/2XsClass"
+                },
+                "lg": {
+                    "$ref": "#/definitions/2XsClass"
+                },
+                "xl": {
+                    "$ref": "#/definitions/2XsClass"
+                },
+                "2xl": {
+                    "$ref": "#/definitions/2XsClass"
+                },
+                "full": {
+                    "$ref": "#/definitions/PurpleFull"
+                }
+            },
+            "required": [
+                "2xl",
+                "2xs",
+                "full",
+                "lg",
+                "md",
+                "sm",
+                "xl",
+                "xs"
+            ],
+            "title": "AvatarSizes"
+        },
+        "2XsClass": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "container": {
+                    "$ref": "#/definitions/2XlContainer"
+                },
+                "excessLabel": {
+                    "$ref": "#/definitions/ExcessLabel"
+                },
+                "label": {
+                    "$ref": "#/definitions/2XlLabel"
+                }
+            },
+            "required": [
+                "container",
+                "excessLabel",
+                "label"
+            ],
+            "title": "2XsClass"
+        },
+        "2XlContainer": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "width": {
+                    "type": "string"
+                },
+                "height": {
+                    "type": "string"
+                },
+                "fontSize": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "fontSize",
+                "height",
+                "width"
+            ],
+            "title": "2XlContainer"
+        },
+        "ExcessLabel": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "width": {
+                    "type": "string"
+                },
+                "height": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "height",
+                "width"
+            ],
+            "title": "ExcessLabel"
+        },
+        "2XlLabel": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "fontSize": {
+                    "type": "string"
+                },
+                "lineHeight": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "fontSize",
+                "lineHeight"
+            ],
+            "title": "2XlLabel"
+        },
+        "PurpleFull": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "container": {
+                    "$ref": "#/definitions/2XlContainer"
+                },
+                "excessLabel": {
+                    "$ref": "#/definitions/ExcessLabel"
+                },
+                "label": {
+                    "$ref": "#/definitions/LabelClass"
+                }
+            },
+            "required": [
+                "container",
+                "excessLabel",
+                "label"
+            ],
+            "title": "PurpleFull"
+        },
+        "Badge": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "baseStyle": {
+                    "$ref": "#/definitions/BadgeBaseStyle"
+                },
+                "variants": {
+                    "$ref": "#/definitions/Styles"
+                },
+                "defaultProps": {
+                    "$ref": "#/definitions/AlertDefaultProps"
+                }
+            },
+            "required": [
+                "baseStyle",
+                "defaultProps",
+                "variants"
+            ],
+            "title": "Badge"
+        },
+        "BadgeBaseStyle": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "px": {
+                    "type": "integer"
+                },
+                "textTransform": {
+                    "type": "string"
+                },
+                "fontSize": {
+                    "$ref": "#/definitions/BorderRadius"
+                },
+                "borderRadius": {
+                    "$ref": "#/definitions/BorderRadius"
+                },
+                "fontWeight": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "borderRadius",
+                "fontSize",
+                "fontWeight",
+                "px",
+                "textTransform"
+            ],
+            "title": "BadgeBaseStyle"
+        },
+        "Breadcrumb": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "parts": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "baseStyle": {
+                    "$ref": "#/definitions/BreadcrumbBaseStyle"
+                }
+            },
+            "required": [
+                "baseStyle",
+                "parts"
+            ],
+            "title": "Breadcrumb"
+        },
+        "BreadcrumbBaseStyle": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "link": {
+                    "$ref": "#/definitions/LinkClass"
+                }
+            },
+            "required": [
+                "link"
+            ],
+            "title": "BreadcrumbBaseStyle"
+        },
+        "LinkClass": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "transitionProperty": {
+                    "type": "string"
+                },
+                "transitionDuration": {
+                    "type": "string"
+                },
+                "transitionTimingFunction": {
+                    "type": "string"
+                },
+                "cursor": {
+                    "type": "string"
+                },
+                "textDecoration": {
+                    "type": "string"
+                },
+                "outline": {
+                    "type": "string"
+                },
+                "color": {
+                    "type": "string"
+                },
+                "_hover": {
+                    "$ref": "#/definitions/LinkHover"
+                },
+                "_focus": {
+                    "$ref": "#/definitions/ButtonFocus"
+                }
+            },
+            "required": [
+                "_focus",
+                "_hover",
+                "color",
+                "cursor",
+                "outline",
+                "textDecoration",
+                "transitionDuration",
+                "transitionProperty",
+                "transitionTimingFunction"
+            ],
+            "title": "LinkClass"
+        },
+        "LinkHover": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "textDecoration": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "textDecoration"
+            ],
+            "title": "LinkHover"
+        },
+        "ButtonClass": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "baseStyle": {
+                    "$ref": "#/definitions/ButtonBaseStyle"
+                },
+                "variants": {
+                    "$ref": "#/definitions/ButtonVariants"
+                },
+                "sizes": {
+                    "$ref": "#/definitions/ButtonSizes"
+                },
+                "defaultProps": {
+                    "$ref": "#/definitions/ButtonDefaultProps"
+                }
+            },
+            "required": [
+                "baseStyle",
+                "defaultProps",
+                "sizes",
+                "variants"
+            ],
+            "title": "ButtonClass"
+        },
+        "ButtonBaseStyle": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "lineHeight": {
+                    "type": "string"
+                },
+                "borderRadius": {
+                    "$ref": "#/definitions/BorderRadius"
+                },
+                "fontWeight": {
+                    "type": "string"
+                },
+                "transitionProperty": {
+                    "type": "string"
+                },
+                "transitionDuration": {
+                    "type": "string"
+                },
+                "_focus": {
+                    "$ref": "#/definitions/ButtonFocus"
+                },
+                "_disabled": {
+                    "$ref": "#/definitions/PurpleDisabled"
+                },
+                "_hover": {
+                    "$ref": "#/definitions/PurpleHover"
+                }
+            },
+            "required": [
+                "_disabled",
+                "_focus",
+                "_hover",
+                "borderRadius",
+                "fontWeight",
+                "lineHeight",
+                "transitionDuration",
+                "transitionProperty"
+            ],
+            "title": "ButtonBaseStyle"
+        },
+        "PurpleDisabled": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "opacity": {
+                    "type": "number"
+                },
+                "cursor": {
+                    "type": "string"
+                },
+                "boxShadow": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "boxShadow",
+                "cursor",
+                "opacity"
+            ],
+            "title": "PurpleDisabled"
+        },
+        "PurpleHover": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "_disabled": {
+                    "$ref": "#/definitions/Hover"
+                }
+            },
+            "required": [
+                "_disabled"
+            ],
+            "title": "PurpleHover"
+        },
+        "ButtonDefaultProps": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "variant": {
+                    "type": "string"
+                },
+                "size": {
+                    "$ref": "#/definitions/BorderRadius"
+                },
+                "colorScheme": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "colorScheme",
+                "size",
+                "variant"
+            ],
+            "title": "ButtonDefaultProps"
+        },
+        "ButtonSizes": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "lg": {
+                    "$ref": "#/definitions/AddonClass"
+                },
+                "md": {
+                    "$ref": "#/definitions/AddonClass"
+                },
+                "sm": {
+                    "$ref": "#/definitions/AddonClass"
+                },
+                "xs": {
+                    "$ref": "#/definitions/AddonClass"
+                }
+            },
+            "required": [
+                "lg",
+                "md",
+                "sm",
+                "xs"
+            ],
+            "title": "ButtonSizes"
+        },
+        "AddonClass": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "h": {
+                    "type": "integer"
+                },
+                "minW": {
+                    "type": "integer"
+                },
+                "fontSize": {
+                    "$ref": "#/definitions/BorderRadius"
+                },
+                "px": {
+                    "type": "integer"
+                },
+                "borderRadius": {
+                    "$ref": "#/definitions/BorderRadius"
+                },
+                "w": {
+                    "type": "integer"
+                },
+                "paddingInlineEnd": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "fontSize",
+                "h"
+            ],
+            "title": "AddonClass"
+        },
+        "ButtonVariants": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "unstyled": {
+                    "$ref": "#/definitions/PurpleUnstyled"
+                }
+            },
+            "required": [
+                "unstyled"
+            ],
+            "title": "ButtonVariants"
+        },
+        "PurpleUnstyled": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "bg": {
+                    "type": "string"
+                },
+                "color": {
+                    "type": "string"
+                },
+                "display": {
+                    "type": "string"
+                },
+                "lineHeight": {
+                    "type": "string"
+                },
+                "m": {
+                    "type": "integer"
+                },
+                "p": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "bg",
+                "color",
+                "display",
+                "lineHeight",
+                "m",
+                "p"
+            ],
+            "title": "PurpleUnstyled"
+        },
+        "Checkbox": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "parts": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "sizes": {
+                    "$ref": "#/definitions/CheckboxSizes"
+                },
+                "defaultProps": {
+                    "$ref": "#/definitions/CheckboxDefaultProps"
+                }
+            },
+            "required": [
+                "defaultProps",
+                "parts",
+                "sizes"
+            ],
+            "title": "Checkbox"
+        },
+        "CheckboxDefaultProps": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "size": {
+                    "$ref": "#/definitions/BorderRadius"
+                },
+                "colorScheme": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "colorScheme",
+                "size"
+            ],
+            "title": "CheckboxDefaultProps"
+        },
+        "CheckboxSizes": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "sm": {
+                    "$ref": "#/definitions/PurpleLg"
+                },
+                "md": {
+                    "$ref": "#/definitions/PurpleLg"
+                },
+                "lg": {
+                    "$ref": "#/definitions/PurpleLg"
+                }
+            },
+            "required": [
+                "lg",
+                "md",
+                "sm"
+            ],
+            "title": "CheckboxSizes"
+        },
+        "PurpleLg": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "control": {
+                    "$ref": "#/definitions/LgControl"
+                },
+                "label": {
+                    "$ref": "#/definitions/LabelClass"
+                },
+                "icon": {
+                    "$ref": "#/definitions/LabelClass"
+                }
+            },
+            "required": [
+                "control",
+                "icon",
+                "label"
+            ],
+            "title": "PurpleLg"
+        },
+        "LgControl": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "h": {
+                    "type": "integer"
+                },
+                "w": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "h",
+                "w"
+            ],
+            "title": "LgControl"
+        },
+        "CloseButton": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "sizes": {
+                    "$ref": "#/definitions/CloseButtonSizes"
+                },
+                "defaultProps": {
+                    "$ref": "#/definitions/AvatarDefaultProps"
+                }
+            },
+            "required": [
+                "defaultProps",
+                "sizes"
+            ],
+            "title": "CloseButton"
+        },
+        "CloseButtonSizes": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "lg": {
+                    "$ref": "#/definitions/FluffyLg"
+                },
+                "md": {
+                    "$ref": "#/definitions/FluffyLg"
+                },
+                "sm": {
+                    "$ref": "#/definitions/FluffyLg"
+                }
+            },
+            "required": [
+                "lg",
+                "md",
+                "sm"
+            ],
+            "title": "CloseButtonSizes"
+        },
+        "FluffyLg": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "--close-button-size": {
+                    "type": "string"
+                },
+                "fontSize": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "--close-button-size",
+                "fontSize"
+            ],
+            "title": "FluffyLg"
+        },
+        "Code": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "baseStyle": {
+                    "$ref": "#/definitions/CodeBaseStyle"
+                },
+                "variants": {
+                    "$ref": "#/definitions/Styles"
+                },
+                "defaultProps": {
+                    "$ref": "#/definitions/AlertDefaultProps"
+                }
+            },
+            "required": [
+                "baseStyle",
+                "defaultProps",
+                "variants"
+            ],
+            "title": "Code"
+        },
+        "CodeBaseStyle": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "fontFamily": {
+                    "type": "string"
+                },
+                "fontSize": {
+                    "$ref": "#/definitions/BorderRadius"
+                },
+                "px": {
+                    "type": "string"
+                },
+                "borderRadius": {
+                    "$ref": "#/definitions/BorderRadius"
+                }
+            },
+            "required": [
+                "borderRadius",
+                "fontFamily",
+                "fontSize",
+                "px"
+            ],
+            "title": "CodeBaseStyle"
+        },
+        "Container": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "baseStyle": {
+                    "$ref": "#/definitions/ContainerBaseStyle"
+                }
+            },
+            "required": [
+                "baseStyle"
+            ],
+            "title": "Container"
+        },
+        "ContainerBaseStyle": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "w": {
+                    "type": "string"
+                },
+                "mx": {
+                    "type": "string"
+                },
+                "maxW": {
+                    "type": "string"
+                },
+                "px": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "maxW",
+                "mx",
+                "px",
+                "w"
+            ],
+            "title": "ContainerBaseStyle"
+        },
+        "Divider": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "baseStyle": {
+                    "$ref": "#/definitions/DividerBaseStyle"
+                },
+                "variants": {
+                    "$ref": "#/definitions/DividerVariants"
+                },
+                "defaultProps": {
+                    "$ref": "#/definitions/DividerDefaultProps"
+                }
+            },
+            "required": [
+                "baseStyle",
+                "defaultProps",
+                "variants"
+            ],
+            "title": "Divider"
+        },
+        "DividerBaseStyle": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "opacity": {
+                    "type": "number"
+                },
+                "borderColor": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "borderColor",
+                "opacity"
+            ],
+            "title": "DividerBaseStyle"
+        },
+        "DividerDefaultProps": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "variant": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "variant"
+            ],
+            "title": "DividerDefaultProps"
+        },
+        "DividerVariants": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "solid": {
+                    "$ref": "#/definitions/Dashed"
+                },
+                "dashed": {
+                    "$ref": "#/definitions/Dashed"
+                }
+            },
+            "required": [
+                "dashed",
+                "solid"
+            ],
+            "title": "DividerVariants"
+        },
+        "Dashed": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "borderStyle": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "borderStyle"
+            ],
+            "title": "Dashed"
+        },
+        "Drawer": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "parts": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "sizes": {
+                    "$ref": "#/definitions/DrawerSizes"
+                },
+                "defaultProps": {
+                    "$ref": "#/definitions/AvatarDefaultProps"
+                }
+            },
+            "required": [
+                "defaultProps",
+                "parts",
+                "sizes"
+            ],
+            "title": "Drawer"
+        },
+        "DrawerSizes": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "xs": {
+                    "$ref": "#/definitions/2XlClass"
+                },
+                "sm": {
+                    "$ref": "#/definitions/2XlClass"
+                },
+                "md": {
+                    "$ref": "#/definitions/2XlClass"
+                },
+                "lg": {
+                    "$ref": "#/definitions/2XlClass"
+                },
+                "xl": {
+                    "$ref": "#/definitions/2XlClass"
+                },
+                "full": {
+                    "$ref": "#/definitions/FluffyFull"
+                }
+            },
+            "required": [
+                "full",
+                "lg",
+                "md",
+                "sm",
+                "xl",
+                "xs"
+            ],
+            "title": "DrawerSizes"
+        },
+        "FluffyFull": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "dialog": {
+                    "$ref": "#/definitions/PurpleDialog"
+                }
+            },
+            "required": [
+                "dialog"
+            ],
+            "title": "FluffyFull"
+        },
+        "PurpleDialog": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "maxW": {
+                    "type": "string"
+                },
+                "h": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "h",
+                "maxW"
+            ],
+            "title": "PurpleDialog"
+        },
+        "2XlClass": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "dialog": {
+                    "$ref": "#/definitions/LgDialog"
+                }
+            },
+            "required": [
+                "dialog"
+            ],
+            "title": "2XlClass"
+        },
+        "LgDialog": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "maxW": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "maxW"
+            ],
+            "title": "LgDialog"
+        },
+        "Editable": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "parts": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "baseStyle": {
+                    "$ref": "#/definitions/EditableBaseStyle"
+                }
+            },
+            "required": [
+                "baseStyle",
+                "parts"
+            ],
+            "title": "Editable"
+        },
+        "EditableBaseStyle": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "preview": {
+                    "$ref": "#/definitions/Preview"
+                },
+                "input": {
+                    "$ref": "#/definitions/Input"
+                }
+            },
+            "required": [
+                "input",
+                "preview"
+            ],
+            "title": "EditableBaseStyle"
+        },
+        "Input": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "borderRadius": {
+                    "$ref": "#/definitions/BorderRadius"
+                },
+                "py": {
+                    "type": "string"
+                },
+                "transitionProperty": {
+                    "type": "string"
+                },
+                "transitionDuration": {
+                    "type": "string"
+                },
+                "width": {
+                    "type": "string"
+                },
+                "_focus": {
+                    "$ref": "#/definitions/ButtonFocus"
+                },
+                "_placeholder": {
+                    "$ref": "#/definitions/Disabled"
+                }
+            },
+            "required": [
+                "_focus",
+                "_placeholder",
+                "borderRadius",
+                "py",
+                "transitionDuration",
+                "transitionProperty",
+                "width"
+            ],
+            "title": "Input"
+        },
+        "Disabled": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "opacity": {
+                    "type": "number"
+                }
+            },
+            "required": [
+                "opacity"
+            ],
+            "title": "Disabled"
+        },
+        "Preview": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "borderRadius": {
+                    "$ref": "#/definitions/BorderRadius"
+                },
+                "py": {
+                    "type": "string"
+                },
+                "transitionProperty": {
+                    "type": "string"
+                },
+                "transitionDuration": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "borderRadius",
+                "py",
+                "transitionDuration",
+                "transitionProperty"
+            ],
+            "title": "Preview"
+        },
+        "Form": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "parts": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": [
+                "parts"
+            ],
+            "title": "Form"
+        },
+        "FormLabel": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "baseStyle": {
+                    "$ref": "#/definitions/FormLabelBaseStyle"
+                }
+            },
+            "required": [
+                "baseStyle"
+            ],
+            "title": "FormLabel"
+        },
+        "FormLabelBaseStyle": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "fontSize": {
+                    "$ref": "#/definitions/BorderRadius"
+                },
+                "marginEnd": {
+                    "type": "integer"
+                },
+                "mb": {
+                    "type": "integer"
+                },
+                "fontWeight": {
+                    "type": "string"
+                },
+                "transitionProperty": {
+                    "type": "string"
+                },
+                "transitionDuration": {
+                    "type": "string"
+                },
+                "opacity": {
+                    "type": "integer"
+                },
+                "_disabled": {
+                    "$ref": "#/definitions/Disabled"
+                }
+            },
+            "required": [
+                "_disabled",
+                "fontSize",
+                "fontWeight",
+                "marginEnd",
+                "mb",
+                "opacity",
+                "transitionDuration",
+                "transitionProperty"
+            ],
+            "title": "FormLabelBaseStyle"
+        },
+        "Heading": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "baseStyle": {
+                    "$ref": "#/definitions/HeadingBaseStyle"
+                },
+                "sizes": {
+                    "$ref": "#/definitions/HeadingSizes"
+                },
+                "defaultProps": {
+                    "$ref": "#/definitions/AvatarDefaultProps"
+                }
+            },
+            "required": [
+                "baseStyle",
+                "defaultProps",
+                "sizes"
+            ],
+            "title": "Heading"
+        },
+        "HeadingBaseStyle": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "fontFamily": {
+                    "type": "string"
+                },
+                "fontWeight": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "fontFamily",
+                "fontWeight"
+            ],
+            "title": "HeadingBaseStyle"
+        },
+        "HeadingSizes": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "4xl": {
+                    "$ref": "#/definitions/Xl"
+                },
+                "3xl": {
+                    "$ref": "#/definitions/Xl"
+                },
+                "2xl": {
+                    "$ref": "#/definitions/Purple2_Xl"
+                },
+                "xl": {
+                    "$ref": "#/definitions/Purple2_Xl"
+                },
+                "lg": {
+                    "$ref": "#/definitions/Purple2_Xl"
+                },
+                "md": {
+                    "$ref": "#/definitions/SmClass"
+                },
+                "sm": {
+                    "$ref": "#/definitions/SmClass"
+                },
+                "xs": {
+                    "$ref": "#/definitions/SmClass"
+                }
+            },
+            "required": [
+                "2xl",
+                "3xl",
+                "4xl",
+                "lg",
+                "md",
+                "sm",
+                "xl",
+                "xs"
+            ],
+            "title": "HeadingSizes"
+        },
+        "Purple2_Xl": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "fontSize": {
+                    "type": "array",
+                    "items": {
+                        "anyOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    }
+                },
+                "lineHeight": {
+                    "type": "array",
+                    "items": {
+                        "anyOf": [
+                            {
+                                "type": "number"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ]
+                    }
+                }
+            },
+            "required": [
+                "fontSize",
+                "lineHeight"
+            ],
+            "title": "Purple2_Xl"
+        },
+        "Xl": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "fontSize": {
+                    "type": "array",
+                    "items": {
+                        "anyOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    }
+                },
+                "lineHeight": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "fontSize",
+                "lineHeight"
+            ],
+            "title": "Xl"
+        },
+        "SmClass": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "fontSize": {
+                    "type": "string"
+                },
+                "lineHeight": {
+                    "type": "number"
+                }
+            },
+            "required": [
+                "fontSize",
+                "lineHeight"
+            ],
+            "title": "SmClass"
+        },
+        "InputClass": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "parts": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "baseStyle": {
+                    "$ref": "#/definitions/InputBaseStyle"
+                },
+                "sizes": {
+                    "$ref": "#/definitions/InputSizes"
+                },
+                "variants": {
+                    "$ref": "#/definitions/InputVariants"
+                },
+                "defaultProps": {
+                    "$ref": "#/definitions/InputDefaultProps"
+                }
+            },
+            "required": [
+                "baseStyle",
+                "defaultProps",
+                "parts",
+                "sizes",
+                "variants"
+            ],
+            "title": "InputClass"
+        },
+        "InputBaseStyle": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "field": {
+                    "$ref": "#/definitions/FieldClass"
+                }
+            },
+            "required": [
+                "field"
+            ],
+            "title": "InputBaseStyle"
+        },
+        "FieldClass": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "width": {
+                    "type": "string"
+                },
+                "minWidth": {
+                    "type": "integer"
+                },
+                "outline": {
+                    "type": "integer"
+                },
+                "position": {
+                    "type": "string"
+                },
+                "appearance": {
+                    "type": "string"
+                },
+                "transitionProperty": {
+                    "type": "string"
+                },
+                "transitionDuration": {
+                    "type": "string"
+                },
+                "textAlign": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "appearance",
+                "minWidth",
+                "outline",
+                "position",
+                "transitionDuration",
+                "transitionProperty",
+                "width"
+            ],
+            "title": "FieldClass"
+        },
+        "InputDefaultProps": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "size": {
+                    "$ref": "#/definitions/BorderRadius"
+                },
+                "variant": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "size",
+                "variant"
+            ],
+            "title": "InputDefaultProps"
+        },
+        "InputSizes": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "lg": {
+                    "$ref": "#/definitions/TentacledLg"
+                },
+                "md": {
+                    "$ref": "#/definitions/TentacledLg"
+                },
+                "sm": {
+                    "$ref": "#/definitions/TentacledLg"
+                },
+                "xs": {
+                    "$ref": "#/definitions/TentacledLg"
+                }
+            },
+            "required": [
+                "lg",
+                "md",
+                "sm",
+                "xs"
+            ],
+            "title": "InputSizes"
+        },
+        "TentacledLg": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "field": {
+                    "$ref": "#/definitions/AddonClass"
+                },
+                "addon": {
+                    "$ref": "#/definitions/AddonClass"
+                }
+            },
+            "required": [
+                "addon",
+                "field"
+            ],
+            "title": "TentacledLg"
+        },
+        "InputVariants": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "unstyled": {
+                    "$ref": "#/definitions/FluffyUnstyled"
+                }
+            },
+            "required": [
+                "unstyled"
+            ],
+            "title": "InputVariants"
+        },
+        "FluffyUnstyled": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "field": {
+                    "$ref": "#/definitions/UnstyledUnstyled"
+                },
+                "addon": {
+                    "$ref": "#/definitions/UnstyledUnstyled"
+                }
+            },
+            "required": [
+                "addon",
+                "field"
+            ],
+            "title": "FluffyUnstyled"
+        },
+        "UnstyledUnstyled": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "bg": {
+                    "type": "string"
+                },
+                "px": {
+                    "type": "integer"
+                },
+                "height": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "bg",
+                "height",
+                "px"
+            ],
+            "title": "UnstyledUnstyled"
+        },
+        "Link": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "baseStyle": {
+                    "$ref": "#/definitions/LinkClass"
+                }
+            },
+            "required": [
+                "baseStyle"
+            ],
+            "title": "Link"
+        },
+        "List": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "parts": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "baseStyle": {
+                    "$ref": "#/definitions/ListBaseStyle"
+                }
+            },
+            "required": [
+                "baseStyle",
+                "parts"
+            ],
+            "title": "List"
+        },
+        "ListBaseStyle": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "container": {
+                    "$ref": "#/definitions/Styles"
+                },
+                "item": {
+                    "$ref": "#/definitions/Styles"
+                },
+                "icon": {
+                    "$ref": "#/definitions/FluffyIcon"
+                }
+            },
+            "required": [
+                "container",
+                "icon",
+                "item"
+            ],
+            "title": "ListBaseStyle"
+        },
+        "FluffyIcon": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "marginEnd": {
+                    "type": "string"
+                },
+                "display": {
+                    "type": "string"
+                },
+                "verticalAlign": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "display",
+                "marginEnd",
+                "verticalAlign"
+            ],
+            "title": "FluffyIcon"
+        },
+        "Modal": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "parts": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "sizes": {
+                    "$ref": "#/definitions/ModalSizes"
+                },
+                "defaultProps": {
+                    "$ref": "#/definitions/AvatarDefaultProps"
+                }
+            },
+            "required": [
+                "defaultProps",
+                "parts",
+                "sizes"
+            ],
+            "title": "Modal"
+        },
+        "ModalSizes": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "xs": {
+                    "$ref": "#/definitions/2XlClass"
+                },
+                "sm": {
+                    "$ref": "#/definitions/2XlClass"
+                },
+                "md": {
+                    "$ref": "#/definitions/2XlClass"
+                },
+                "lg": {
+                    "$ref": "#/definitions/2XlClass"
+                },
+                "xl": {
+                    "$ref": "#/definitions/2XlClass"
+                },
+                "2xl": {
+                    "$ref": "#/definitions/2XlClass"
+                },
+                "3xl": {
+                    "$ref": "#/definitions/2XlClass"
+                },
+                "4xl": {
+                    "$ref": "#/definitions/2XlClass"
+                },
+                "5xl": {
+                    "$ref": "#/definitions/2XlClass"
+                },
+                "6xl": {
+                    "$ref": "#/definitions/2XlClass"
+                },
+                "full": {
+                    "$ref": "#/definitions/TentacledFull"
+                }
+            },
+            "required": [
+                "2xl",
+                "3xl",
+                "4xl",
+                "5xl",
+                "6xl",
+                "full",
+                "lg",
+                "md",
+                "sm",
+                "xl",
+                "xs"
+            ],
+            "title": "ModalSizes"
+        },
+        "TentacledFull": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "dialog": {
+                    "$ref": "#/definitions/FluffyDialog"
+                }
+            },
+            "required": [
+                "dialog"
+            ],
+            "title": "TentacledFull"
+        },
+        "FluffyDialog": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "maxW": {
+                    "type": "string"
+                },
+                "minH": {
+                    "type": "string"
+                },
+                "my": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "maxW",
+                "minH",
+                "my"
+            ],
+            "title": "FluffyDialog"
+        },
+        "NumberInput": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "parts": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "sizes": {
+                    "$ref": "#/definitions/NumberInputSizes"
+                },
+                "variants": {
+                    "$ref": "#/definitions/InputVariants"
+                },
+                "defaultProps": {
+                    "$ref": "#/definitions/InputDefaultProps"
+                }
+            },
+            "required": [
+                "defaultProps",
+                "parts",
+                "sizes",
+                "variants"
+            ],
+            "title": "NumberInput"
+        },
+        "NumberInputSizes": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "xs": {
+                    "$ref": "#/definitions/StickyLg"
+                },
+                "sm": {
+                    "$ref": "#/definitions/StickyLg"
+                },
+                "md": {
+                    "$ref": "#/definitions/StickyLg"
+                },
+                "lg": {
+                    "$ref": "#/definitions/StickyLg"
+                }
+            },
+            "required": [
+                "lg",
+                "md",
+                "sm",
+                "xs"
+            ],
+            "title": "NumberInputSizes"
+        },
+        "StickyLg": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "field": {
+                    "$ref": "#/definitions/Field"
+                },
+                "stepper": {
+                    "$ref": "#/definitions/Stepper"
+                }
+            },
+            "required": [
+                "field",
+                "stepper"
+            ],
+            "title": "StickyLg"
+        },
+        "Field": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "fontSize": {
+                    "$ref": "#/definitions/BorderRadius"
+                },
+                "px": {
+                    "type": "integer"
+                },
+                "h": {
+                    "type": "integer"
+                },
+                "borderRadius": {
+                    "$ref": "#/definitions/BorderRadius"
+                },
+                "paddingInlineEnd": {
+                    "type": "string"
+                },
+                "verticalAlign": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "borderRadius",
+                "fontSize",
+                "h",
+                "paddingInlineEnd",
+                "px",
+                "verticalAlign"
+            ],
+            "title": "Field"
+        },
+        "Stepper": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "fontSize": {
+                    "type": "string"
+                },
+                "_first": {
+                    "$ref": "#/definitions/First"
+                },
+                "_last": {
+                    "$ref": "#/definitions/StepperLast"
+                }
+            },
+            "required": [
+                "_first",
+                "_last",
+                "fontSize"
+            ],
+            "title": "Stepper"
+        },
+        "First": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "borderTopEndRadius": {
+                    "$ref": "#/definitions/BorderRadius"
+                }
+            },
+            "required": [
+                "borderTopEndRadius"
+            ],
+            "title": "First"
+        },
+        "StepperLast": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "borderBottomEndRadius": {
+                    "$ref": "#/definitions/BorderRadius"
+                },
+                "mt": {
+                    "type": "string"
+                },
+                "borderTopWidth": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "borderBottomEndRadius",
+                "borderTopWidth",
+                "mt"
+            ],
+            "title": "StepperLast"
+        },
+        "PinInput": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "baseStyle": {
+                    "$ref": "#/definitions/FieldClass"
+                },
+                "sizes": {
+                    "$ref": "#/definitions/ButtonSizes"
+                },
+                "variants": {
+                    "$ref": "#/definitions/PinInputVariants"
+                },
+                "defaultProps": {
+                    "$ref": "#/definitions/InputDefaultProps"
+                }
+            },
+            "required": [
+                "baseStyle",
+                "defaultProps",
+                "sizes",
+                "variants"
+            ],
+            "title": "PinInput"
+        },
+        "PinInputVariants": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "unstyled": {
+                    "$ref": "#/definitions/UnstyledUnstyled"
+                }
+            },
+            "required": [
+                "unstyled"
+            ],
+            "title": "PinInputVariants"
+        },
+        "Progress": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "parts": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "sizes": {
+                    "$ref": "#/definitions/ProgressSizes"
+                },
+                "defaultProps": {
+                    "$ref": "#/definitions/CheckboxDefaultProps"
+                }
+            },
+            "required": [
+                "defaultProps",
+                "parts",
+                "sizes"
+            ],
+            "title": "Progress"
+        },
+        "ProgressSizes": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "xs": {
+                    "$ref": "#/definitions/IndigoLg"
+                },
+                "sm": {
+                    "$ref": "#/definitions/IndigoLg"
+                },
+                "md": {
+                    "$ref": "#/definitions/IndigoLg"
+                },
+                "lg": {
+                    "$ref": "#/definitions/IndigoLg"
+                }
+            },
+            "required": [
+                "lg",
+                "md",
+                "sm",
+                "xs"
+            ],
+            "title": "ProgressSizes"
+        },
+        "IndigoLg": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "track": {
+                    "$ref": "#/definitions/Track"
+                }
+            },
+            "required": [
+                "track"
+            ],
+            "title": "IndigoLg"
+        },
+        "Track": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "h": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "h"
+            ],
+            "title": "Track"
+        },
+        "Radio": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "parts": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "sizes": {
+                    "$ref": "#/definitions/RadioSizes"
+                },
+                "defaultProps": {
+                    "$ref": "#/definitions/CheckboxDefaultProps"
+                }
+            },
+            "required": [
+                "defaultProps",
+                "parts",
+                "sizes"
+            ],
+            "title": "Radio"
+        },
+        "RadioSizes": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "md": {
+                    "$ref": "#/definitions/IndecentLg"
+                },
+                "lg": {
+                    "$ref": "#/definitions/IndecentLg"
+                },
+                "sm": {
+                    "$ref": "#/definitions/PurpleSm"
+                }
+            },
+            "required": [
+                "lg",
+                "md",
+                "sm"
+            ],
+            "title": "RadioSizes"
+        },
+        "IndecentLg": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "control": {
+                    "$ref": "#/definitions/LgControl"
+                },
+                "label": {
+                    "$ref": "#/definitions/LabelClass"
+                }
+            },
+            "required": [
+                "control",
+                "label"
+            ],
+            "title": "IndecentLg"
+        },
+        "PurpleSm": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "control": {
+                    "$ref": "#/definitions/PurpleControl"
+                },
+                "label": {
+                    "$ref": "#/definitions/LabelClass"
+                }
+            },
+            "required": [
+                "control",
+                "label"
+            ],
+            "title": "PurpleSm"
+        },
+        "PurpleControl": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "width": {
+                    "type": "integer"
+                },
+                "height": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "height",
+                "width"
+            ],
+            "title": "PurpleControl"
+        },
+        "Select": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "parts": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "sizes": {
+                    "$ref": "#/definitions/SelectSizes"
+                },
+                "variants": {
+                    "$ref": "#/definitions/InputVariants"
+                },
+                "defaultProps": {
+                    "$ref": "#/definitions/InputDefaultProps"
+                }
+            },
+            "required": [
+                "defaultProps",
+                "parts",
+                "sizes",
+                "variants"
+            ],
+            "title": "Select"
+        },
+        "SelectSizes": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "lg": {
+                    "$ref": "#/definitions/TentacledLg"
+                },
+                "md": {
+                    "$ref": "#/definitions/TentacledLg"
+                },
+                "sm": {
+                    "$ref": "#/definitions/TentacledLg"
+                },
+                "xs": {
+                    "$ref": "#/definitions/Xs"
+                }
+            },
+            "required": [
+                "lg",
+                "md",
+                "sm",
+                "xs"
+            ],
+            "title": "SelectSizes"
+        },
+        "Xs": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "field": {
+                    "$ref": "#/definitions/AddonClass"
+                },
+                "addon": {
+                    "$ref": "#/definitions/AddonClass"
+                },
+                "icon": {
+                    "$ref": "#/definitions/XsIcon"
+                }
+            },
+            "required": [
+                "addon",
+                "field",
+                "icon"
+            ],
+            "title": "Xs"
+        },
+        "XsIcon": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "insetEnd": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "insetEnd"
+            ],
+            "title": "XsIcon"
+        },
+        "Slider": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "parts": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "sizes": {
+                    "$ref": "#/definitions/Styles"
+                },
+                "defaultProps": {
+                    "$ref": "#/definitions/CheckboxDefaultProps"
+                }
+            },
+            "required": [
+                "defaultProps",
+                "parts",
+                "sizes"
+            ],
+            "title": "Slider"
+        },
+        "Spinner": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "baseStyle": {
+                    "$ref": "#/definitions/SpinnerBaseStyle"
+                },
+                "sizes": {
+                    "$ref": "#/definitions/SpinnerSizes"
+                },
+                "defaultProps": {
+                    "$ref": "#/definitions/AvatarDefaultProps"
+                }
+            },
+            "required": [
+                "baseStyle",
+                "defaultProps",
+                "sizes"
+            ],
+            "title": "Spinner"
+        },
+        "SpinnerBaseStyle": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "width": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "height": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": [
+                "height",
+                "width"
+            ],
+            "title": "SpinnerBaseStyle"
+        },
+        "SpinnerSizes": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "xs": {
+                    "$ref": "#/definitions/HilariousLg"
+                },
+                "sm": {
+                    "$ref": "#/definitions/HilariousLg"
+                },
+                "md": {
+                    "$ref": "#/definitions/HilariousLg"
+                },
+                "lg": {
+                    "$ref": "#/definitions/HilariousLg"
+                },
+                "xl": {
+                    "$ref": "#/definitions/HilariousLg"
+                }
+            },
+            "required": [
+                "lg",
+                "md",
+                "sm",
+                "xl",
+                "xs"
+            ],
+            "title": "SpinnerSizes"
+        },
+        "HilariousLg": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "--spinner-size": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "--spinner-size"
+            ],
+            "title": "HilariousLg"
+        },
+        "Stat": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "parts": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "baseStyle": {
+                    "$ref": "#/definitions/StatBaseStyle"
+                },
+                "sizes": {
+                    "$ref": "#/definitions/StatSizes"
+                },
+                "defaultProps": {
+                    "$ref": "#/definitions/AvatarDefaultProps"
+                }
+            },
+            "required": [
+                "baseStyle",
+                "defaultProps",
+                "parts",
+                "sizes"
+            ],
+            "title": "Stat"
+        },
+        "StatBaseStyle": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "container": {
+                    "$ref": "#/definitions/Styles"
+                },
+                "label": {
+                    "$ref": "#/definitions/PurpleLabel"
+                },
+                "helpText": {
+                    "$ref": "#/definitions/HelpText"
+                },
+                "number": {
+                    "$ref": "#/definitions/Number"
+                },
+                "icon": {
+                    "$ref": "#/definitions/TentacledIcon"
+                }
+            },
+            "required": [
+                "container",
+                "helpText",
+                "icon",
+                "label",
+                "number"
+            ],
+            "title": "StatBaseStyle"
+        },
+        "HelpText": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "opacity": {
+                    "type": "number"
+                },
+                "marginBottom": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "marginBottom",
+                "opacity"
+            ],
+            "title": "HelpText"
+        },
+        "TentacledIcon": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "marginEnd": {
+                    "type": "integer"
+                },
+                "w": {
+                    "type": "string"
+                },
+                "h": {
+                    "type": "string"
+                },
+                "verticalAlign": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "h",
+                "marginEnd",
+                "verticalAlign",
+                "w"
+            ],
+            "title": "TentacledIcon"
+        },
+        "PurpleLabel": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "fontWeight": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "fontWeight"
+            ],
+            "title": "PurpleLabel"
+        },
+        "Number": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "verticalAlign": {
+                    "type": "string"
+                },
+                "fontWeight": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "fontWeight",
+                "verticalAlign"
+            ],
+            "title": "Number"
+        },
+        "StatSizes": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "md": {
+                    "$ref": "#/definitions/PurpleMd"
+                }
+            },
+            "required": [
+                "md"
+            ],
+            "title": "StatSizes"
+        },
+        "PurpleMd": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "label": {
+                    "$ref": "#/definitions/LabelClass"
+                },
+                "helpText": {
+                    "$ref": "#/definitions/LabelClass"
+                },
+                "number": {
+                    "$ref": "#/definitions/LabelClass"
+                }
+            },
+            "required": [
+                "helpText",
+                "label",
+                "number"
+            ],
+            "title": "PurpleMd"
+        },
+        "Switch": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "parts": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "sizes": {
+                    "$ref": "#/definitions/SwitchSizes"
+                },
+                "defaultProps": {
+                    "$ref": "#/definitions/CheckboxDefaultProps"
+                }
+            },
+            "required": [
+                "defaultProps",
+                "parts",
+                "sizes"
+            ],
+            "title": "Switch"
+        },
+        "SwitchSizes": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "sm": {
+                    "$ref": "#/definitions/AmbitiousLg"
+                },
+                "md": {
+                    "$ref": "#/definitions/AmbitiousLg"
+                },
+                "lg": {
+                    "$ref": "#/definitions/AmbitiousLg"
+                }
+            },
+            "required": [
+                "lg",
+                "md",
+                "sm"
+            ],
+            "title": "SwitchSizes"
+        },
+        "AmbitiousLg": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "container": {
+                    "$ref": "#/definitions/TentacledContainer"
+                }
+            },
+            "required": [
+                "container"
+            ],
+            "title": "AmbitiousLg"
+        },
+        "TentacledContainer": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "--switch-track-width": {
+                    "type": "string"
+                },
+                "--switch-track-height": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "--switch-track-height",
+                "--switch-track-width"
+            ],
+            "title": "TentacledContainer"
+        },
+        "Table": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "parts": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "baseStyle": {
+                    "$ref": "#/definitions/TableBaseStyle"
+                },
+                "variants": {
+                    "$ref": "#/definitions/TableVariants"
+                },
+                "sizes": {
+                    "$ref": "#/definitions/TableSizes"
+                },
+                "defaultProps": {
+                    "$ref": "#/definitions/ButtonDefaultProps"
+                }
+            },
+            "required": [
+                "baseStyle",
+                "defaultProps",
+                "parts",
+                "sizes",
+                "variants"
+            ],
+            "title": "Table"
+        },
+        "TableBaseStyle": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "table": {
+                    "$ref": "#/definitions/TableClass"
+                },
+                "th": {
+                    "$ref": "#/definitions/Th"
+                },
+                "td": {
+                    "$ref": "#/definitions/BaseStyleTd"
+                },
+                "caption": {
+                    "$ref": "#/definitions/BaseStyleCaption"
+                }
+            },
+            "required": [
+                "caption",
+                "table",
+                "td",
+                "th"
+            ],
+            "title": "TableBaseStyle"
+        },
+        "BaseStyleCaption": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "mt": {
+                    "type": "integer"
+                },
+                "fontFamily": {
+                    "type": "string"
+                },
+                "textAlign": {
+                    "type": "string"
+                },
+                "fontWeight": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "fontFamily",
+                "fontWeight",
+                "mt",
+                "textAlign"
+            ],
+            "title": "BaseStyleCaption"
+        },
+        "TableClass": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "fontVariantNumeric": {
+                    "type": "string"
+                },
+                "borderCollapse": {
+                    "type": "string"
+                },
+                "width": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "borderCollapse",
+                "fontVariantNumeric",
+                "width"
+            ],
+            "title": "TableClass"
+        },
+        "BaseStyleTd": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "textAlign": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "textAlign"
+            ],
+            "title": "BaseStyleTd"
+        },
+        "Th": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "fontFamily": {
+                    "type": "string"
+                },
+                "fontWeight": {
+                    "type": "string"
+                },
+                "textTransform": {
+                    "type": "string"
+                },
+                "letterSpacing": {
+                    "type": "string"
+                },
+                "textAlign": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "fontFamily",
+                "fontWeight",
+                "letterSpacing",
+                "textAlign",
+                "textTransform"
+            ],
+            "title": "Th"
+        },
+        "TableSizes": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "sm": {
+                    "$ref": "#/definitions/FluffySm"
+                },
+                "md": {
+                    "$ref": "#/definitions/CunningLg"
+                },
+                "lg": {
+                    "$ref": "#/definitions/CunningLg"
+                }
+            },
+            "required": [
+                "lg",
+                "md",
+                "sm"
+            ],
+            "title": "TableSizes"
+        },
+        "CunningLg": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "th": {
+                    "$ref": "#/definitions/ThClass"
+                },
+                "td": {
+                    "$ref": "#/definitions/ThClass"
+                },
+                "caption": {
+                    "$ref": "#/definitions/LgCaption"
+                }
+            },
+            "required": [
+                "caption",
+                "td",
+                "th"
+            ],
+            "title": "CunningLg"
+        },
+        "LgCaption": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "px": {
+                    "type": "string",
+                    "format": "integer"
+                },
+                "py": {
+                    "type": "string",
+                    "format": "integer"
+                },
+                "fontSize": {
+                    "$ref": "#/definitions/BorderRadius"
+                }
+            },
+            "required": [
+                "fontSize",
+                "px",
+                "py"
+            ],
+            "title": "LgCaption"
+        },
+        "ThClass": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "px": {
+                    "type": "string",
+                    "format": "integer"
+                },
+                "py": {
+                    "type": "string",
+                    "format": "integer"
+                },
+                "lineHeight": {
+                    "type": "string",
+                    "format": "integer"
+                },
+                "fontSize": {
+                    "$ref": "#/definitions/BorderRadius"
+                }
+            },
+            "required": [
+                "px",
+                "py"
+            ],
+            "title": "ThClass"
+        },
+        "FluffySm": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "th": {
+                    "$ref": "#/definitions/ThClass"
+                },
+                "td": {
+                    "$ref": "#/definitions/ThClass"
+                },
+                "caption": {
+                    "$ref": "#/definitions/ThClass"
+                }
+            },
+            "required": [
+                "caption",
+                "td",
+                "th"
+            ],
+            "title": "FluffySm"
+        },
+        "TableVariants": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "unstyled": {
+                    "$ref": "#/definitions/Styles"
+                }
+            },
+            "required": [
+                "unstyled"
+            ],
+            "title": "TableVariants"
+        },
+        "Tabs": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "parts": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "sizes": {
+                    "$ref": "#/definitions/TabsSizes"
+                },
+                "variants": {
+                    "$ref": "#/definitions/TableVariants"
+                },
+                "defaultProps": {
+                    "$ref": "#/definitions/ButtonDefaultProps"
+                }
+            },
+            "required": [
+                "defaultProps",
+                "parts",
+                "sizes",
+                "variants"
+            ],
+            "title": "Tabs"
+        },
+        "TabsSizes": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "sm": {
+                    "$ref": "#/definitions/MagentaLg"
+                },
+                "md": {
+                    "$ref": "#/definitions/MagentaLg"
+                },
+                "lg": {
+                    "$ref": "#/definitions/MagentaLg"
+                }
+            },
+            "required": [
+                "lg",
+                "md",
+                "sm"
+            ],
+            "title": "TabsSizes"
+        },
+        "MagentaLg": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "tab": {
+                    "$ref": "#/definitions/Tab"
+                }
+            },
+            "required": [
+                "tab"
+            ],
+            "title": "MagentaLg"
+        },
+        "Tab": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "fontSize": {
+                    "$ref": "#/definitions/BorderRadius"
+                },
+                "py": {
+                    "type": "integer"
+                },
+                "px": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "fontSize",
+                "px",
+                "py"
+            ],
+            "title": "Tab"
+        },
+        "Tag": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "parts": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "variants": {
+                    "$ref": "#/definitions/Styles"
+                },
+                "baseStyle": {
+                    "$ref": "#/definitions/TagBaseStyle"
+                },
+                "sizes": {
+                    "$ref": "#/definitions/TagSizes"
+                },
+                "defaultProps": {
+                    "$ref": "#/definitions/ButtonDefaultProps"
+                }
+            },
+            "required": [
+                "baseStyle",
+                "defaultProps",
+                "parts",
+                "sizes",
+                "variants"
+            ],
+            "title": "Tag"
+        },
+        "TagBaseStyle": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "container": {
+                    "$ref": "#/definitions/StickyContainer"
+                },
+                "label": {
+                    "$ref": "#/definitions/FluffyLabel"
+                },
+                "closeButton": {
+                    "$ref": "#/definitions/BaseStyleCloseButton"
+                }
+            },
+            "required": [
+                "closeButton",
+                "container",
+                "label"
+            ],
+            "title": "TagBaseStyle"
+        },
+        "BaseStyleCloseButton": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "fontSize": {
+                    "type": "string"
+                },
+                "w": {
+                    "type": "string"
+                },
+                "h": {
+                    "type": "string"
+                },
+                "transitionProperty": {
+                    "type": "string"
+                },
+                "transitionDuration": {
+                    "type": "string"
+                },
+                "borderRadius": {
+                    "type": "string"
+                },
+                "marginStart": {
+                    "type": "string"
+                },
+                "marginEnd": {
+                    "type": "string",
+                    "format": "integer"
+                },
+                "opacity": {
+                    "type": "number"
+                },
+                "_disabled": {
+                    "$ref": "#/definitions/Disabled"
+                },
+                "_focus": {
+                    "$ref": "#/definitions/CloseButtonFocus"
+                },
+                "_hover": {
+                    "$ref": "#/definitions/Disabled"
+                },
+                "_active": {
+                    "$ref": "#/definitions/Disabled"
+                }
+            },
+            "required": [
+                "_active",
+                "_disabled",
+                "_focus",
+                "_hover",
+                "borderRadius",
+                "fontSize",
+                "h",
+                "marginEnd",
+                "marginStart",
+                "opacity",
+                "transitionDuration",
+                "transitionProperty",
+                "w"
+            ],
+            "title": "BaseStyleCloseButton"
+        },
+        "CloseButtonFocus": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "boxShadow": {
+                    "type": "string"
+                },
+                "bg": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "bg",
+                "boxShadow"
+            ],
+            "title": "CloseButtonFocus"
+        },
+        "StickyContainer": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "fontWeight": {
+                    "type": "string"
+                },
+                "lineHeight": {
+                    "type": "number"
+                },
+                "outline": {
+                    "type": "integer"
+                },
+                "_focus": {
+                    "$ref": "#/definitions/ButtonFocus"
+                }
+            },
+            "required": [
+                "_focus",
+                "fontWeight",
+                "lineHeight",
+                "outline"
+            ],
+            "title": "StickyContainer"
+        },
+        "FluffyLabel": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "lineHeight": {
+                    "type": "number"
+                },
+                "overflow": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "lineHeight",
+                "overflow"
+            ],
+            "title": "FluffyLabel"
+        },
+        "TagSizes": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "sm": {
+                    "$ref": "#/definitions/TentacledSm"
+                },
+                "md": {
+                    "$ref": "#/definitions/FluffyMd"
+                },
+                "lg": {
+                    "$ref": "#/definitions/FriskyLg"
+                }
+            },
+            "required": [
+                "lg",
+                "md",
+                "sm"
+            ],
+            "title": "TagSizes"
+        },
+        "FriskyLg": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "container": {
+                    "$ref": "#/definitions/IndigoContainer"
+                }
+            },
+            "required": [
+                "container"
+            ],
+            "title": "FriskyLg"
+        },
+        "IndigoContainer": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "minH": {
+                    "type": "integer"
+                },
+                "minW": {
+                    "type": "integer"
+                },
+                "fontSize": {
+                    "$ref": "#/definitions/BorderRadius"
+                },
+                "borderRadius": {
+                    "$ref": "#/definitions/BorderRadius"
+                },
+                "px": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "borderRadius",
+                "fontSize",
+                "minH",
+                "minW",
+                "px"
+            ],
+            "title": "IndigoContainer"
+        },
+        "FluffyMd": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "container": {
+                    "$ref": "#/definitions/IndecentContainer"
+                }
+            },
+            "required": [
+                "container"
+            ],
+            "title": "FluffyMd"
+        },
+        "IndecentContainer": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "minH": {
+                    "type": "string"
+                },
+                "minW": {
+                    "type": "string"
+                },
+                "fontSize": {
+                    "$ref": "#/definitions/BorderRadius"
+                },
+                "borderRadius": {
+                    "$ref": "#/definitions/BorderRadius"
+                },
+                "px": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "borderRadius",
+                "fontSize",
+                "minH",
+                "minW",
+                "px"
+            ],
+            "title": "IndecentContainer"
+        },
+        "TentacledSm": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "container": {
+                    "$ref": "#/definitions/IndecentContainer"
+                },
+                "closeButton": {
+                    "$ref": "#/definitions/SmCloseButton"
+                }
+            },
+            "required": [
+                "closeButton",
+                "container"
+            ],
+            "title": "TentacledSm"
+        },
+        "SmCloseButton": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "marginEnd": {
+                    "type": "string"
+                },
+                "marginStart": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "marginEnd",
+                "marginStart"
+            ],
+            "title": "SmCloseButton"
+        },
+        "Textarea": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "baseStyle": {
+                    "$ref": "#/definitions/TextareaBaseStyle"
+                },
+                "sizes": {
+                    "$ref": "#/definitions/ButtonSizes"
+                },
+                "variants": {
+                    "$ref": "#/definitions/PinInputVariants"
+                },
+                "defaultProps": {
+                    "$ref": "#/definitions/InputDefaultProps"
+                }
+            },
+            "required": [
+                "baseStyle",
+                "defaultProps",
+                "sizes",
+                "variants"
+            ],
+            "title": "Textarea"
+        },
+        "TextareaBaseStyle": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "width": {
+                    "type": "string"
+                },
+                "minWidth": {
+                    "type": "integer"
+                },
+                "outline": {
+                    "type": "integer"
+                },
+                "position": {
+                    "type": "string"
+                },
+                "appearance": {
+                    "type": "string"
+                },
+                "transitionProperty": {
+                    "type": "string"
+                },
+                "transitionDuration": {
+                    "type": "string"
+                },
+                "paddingY": {
+                    "type": "string"
+                },
+                "minHeight": {
+                    "type": "string"
+                },
+                "lineHeight": {
+                    "type": "string"
+                },
+                "verticalAlign": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "appearance",
+                "lineHeight",
+                "minHeight",
+                "minWidth",
+                "outline",
+                "paddingY",
+                "position",
+                "transitionDuration",
+                "transitionProperty",
+                "verticalAlign",
+                "width"
+            ],
+            "title": "TextareaBaseStyle"
+        },
+        "Config": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "useSystemColorMode": {
+                    "type": "boolean"
+                },
+                "initialColorMode": {
+                    "type": "string"
+                },
+                "cssVarPrefix": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "cssVarPrefix",
+                "initialColorMode",
+                "useSystemColorMode"
+            ],
+            "title": "Config"
+        },
+        "FontSizes": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "xs": {
+                    "type": "string"
+                },
+                "sm": {
+                    "type": "string"
+                },
+                "md": {
+                    "type": "string"
+                },
+                "lg": {
+                    "type": "string"
+                },
+                "xl": {
+                    "type": "string"
+                },
+                "2xl": {
+                    "type": "string"
+                },
+                "3xl": {
+                    "type": "string"
+                },
+                "4xl": {
+                    "type": "string"
+                },
+                "5xl": {
+                    "type": "string"
+                },
+                "6xl": {
+                    "type": "string"
+                },
+                "7xl": {
+                    "type": "string"
+                },
+                "8xl": {
+                    "type": "string"
+                },
+                "9xl": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "2xl",
+                "3xl",
+                "4xl",
+                "5xl",
+                "6xl",
+                "7xl",
+                "8xl",
+                "9xl",
+                "lg",
+                "md",
+                "sm",
+                "xl",
+                "xs"
+            ],
+            "title": "FontSizes"
+        },
+        "FontWeights": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "hairline": {
+                    "type": "integer"
+                },
+                "thin": {
+                    "type": "integer"
+                },
+                "light": {
+                    "type": "integer"
+                },
+                "normal": {
+                    "type": "integer"
+                },
+                "medium": {
+                    "type": "integer"
+                },
+                "semibold": {
+                    "type": "integer"
+                },
+                "bold": {
+                    "type": "integer"
+                },
+                "extrabold": {
+                    "type": "integer"
+                },
+                "black": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "black",
+                "bold",
+                "extrabold",
+                "hairline",
+                "light",
+                "medium",
+                "normal",
+                "semibold",
+                "thin"
+            ],
+            "title": "FontWeights"
+        },
+        "Fonts": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "heading": {
+                    "type": "string"
+                },
+                "body": {
+                    "type": "string"
+                },
+                "mono": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "body",
+                "heading",
+                "mono"
+            ],
+            "title": "Fonts"
+        },
+        "LetterSpacings": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "tighter": {
+                    "type": "string"
+                },
+                "tight": {
+                    "type": "string"
+                },
+                "normal": {
+                    "type": "string",
+                    "format": "integer"
+                },
+                "wide": {
+                    "type": "string"
+                },
+                "wider": {
+                    "type": "string"
+                },
+                "widest": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "normal",
+                "tight",
+                "tighter",
+                "wide",
+                "wider",
+                "widest"
+            ],
+            "title": "LetterSpacings"
+        },
+        "LineHeights": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "3": {
+                    "type": "string"
+                },
+                "4": {
+                    "type": "string"
+                },
+                "5": {
+                    "type": "string"
+                },
+                "6": {
+                    "type": "string"
+                },
+                "7": {
+                    "type": "string"
+                },
+                "8": {
+                    "type": "string"
+                },
+                "9": {
+                    "type": "string"
+                },
+                "10": {
+                    "type": "string"
+                },
+                "normal": {
+                    "type": "string"
+                },
+                "none": {
+                    "type": "integer"
+                },
+                "shorter": {
+                    "type": "number"
+                },
+                "short": {
+                    "type": "number"
+                },
+                "base": {
+                    "type": "number"
+                },
+                "tall": {
+                    "type": "number"
+                },
+                "taller": {
+                    "type": "string",
+                    "format": "integer"
+                }
+            },
+            "required": [
+                "10",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "base",
+                "none",
+                "normal",
+                "short",
+                "shorter",
+                "tall",
+                "taller"
+            ],
+            "title": "LineHeights"
+        },
+        "Radii": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "none": {
+                    "type": "string",
+                    "format": "integer"
+                },
+                "sm": {
+                    "type": "string"
+                },
+                "base": {
+                    "type": "string"
+                },
+                "md": {
+                    "type": "string"
+                },
+                "lg": {
+                    "type": "string"
+                },
+                "xl": {
+                    "type": "string"
+                },
+                "2xl": {
+                    "type": "string"
+                },
+                "3xl": {
+                    "type": "string"
+                },
+                "full": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "2xl",
+                "3xl",
+                "base",
+                "full",
+                "lg",
+                "md",
+                "none",
+                "sm",
+                "xl"
+            ],
+            "title": "Radii"
+        },
+        "Shadows": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "xs": {
+                    "type": "string"
+                },
+                "sm": {
+                    "type": "string"
+                },
+                "base": {
+                    "type": "string"
+                },
+                "md": {
+                    "type": "string"
+                },
+                "lg": {
+                    "type": "string"
+                },
+                "xl": {
+                    "type": "string"
+                },
+                "2xl": {
+                    "type": "string"
+                },
+                "outline": {
+                    "type": "string"
+                },
+                "inner": {
+                    "type": "string"
+                },
+                "none": {
+                    "type": "string"
+                },
+                "dark-lg": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "2xl",
+                "base",
+                "dark-lg",
+                "inner",
+                "lg",
+                "md",
+                "none",
+                "outline",
+                "sm",
+                "xl",
+                "xs"
+            ],
+            "title": "Shadows"
+        },
+        "ChakraThemeSizes": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "1": {
+                    "type": "string"
+                },
+                "2": {
+                    "type": "string"
+                },
+                "3": {
+                    "type": "string"
+                },
+                "4": {
+                    "type": "string"
+                },
+                "5": {
+                    "type": "string"
+                },
+                "6": {
+                    "type": "string"
+                },
+                "7": {
+                    "type": "string"
+                },
+                "8": {
+                    "type": "string"
+                },
+                "9": {
+                    "type": "string"
+                },
+                "10": {
+                    "type": "string"
+                },
+                "12": {
+                    "type": "string"
+                },
+                "14": {
+                    "type": "string"
+                },
+                "16": {
+                    "type": "string"
+                },
+                "20": {
+                    "type": "string"
+                },
+                "24": {
+                    "type": "string"
+                },
+                "28": {
+                    "type": "string"
+                },
+                "32": {
+                    "type": "string"
+                },
+                "36": {
+                    "type": "string"
+                },
+                "40": {
+                    "type": "string"
+                },
+                "44": {
+                    "type": "string"
+                },
+                "48": {
+                    "type": "string"
+                },
+                "52": {
+                    "type": "string"
+                },
+                "56": {
+                    "type": "string"
+                },
+                "60": {
+                    "type": "string"
+                },
+                "64": {
+                    "type": "string"
+                },
+                "72": {
+                    "type": "string"
+                },
+                "80": {
+                    "type": "string"
+                },
+                "96": {
+                    "type": "string"
+                },
+                "px": {
+                    "type": "string"
+                },
+                "0.5": {
+                    "type": "string"
+                },
+                "1.5": {
+                    "type": "string"
+                },
+                "2.5": {
+                    "type": "string"
+                },
+                "3.5": {
+                    "type": "string"
+                },
+                "max": {
+                    "type": "string"
+                },
+                "min": {
+                    "type": "string"
+                },
+                "full": {
+                    "type": "string"
+                },
+                "3xs": {
+                    "type": "string"
+                },
+                "2xs": {
+                    "type": "string"
+                },
+                "xs": {
+                    "type": "string"
+                },
+                "sm": {
+                    "type": "string"
+                },
+                "md": {
+                    "type": "string"
+                },
+                "lg": {
+                    "type": "string"
+                },
+                "xl": {
+                    "type": "string"
+                },
+                "2xl": {
+                    "type": "string"
+                },
+                "3xl": {
+                    "type": "string"
+                },
+                "4xl": {
+                    "type": "string"
+                },
+                "5xl": {
+                    "type": "string"
+                },
+                "6xl": {
+                    "type": "string"
+                },
+                "7xl": {
+                    "type": "string"
+                },
+                "8xl": {
+                    "type": "string"
+                },
+                "container": {
+                    "$ref": "#/definitions/SizesContainer"
+                }
+            },
+            "required": [
+                "0.5",
+                "1",
+                "1.5",
+                "10",
+                "12",
+                "14",
+                "16",
+                "2",
+                "2.5",
+                "20",
+                "24",
+                "28",
+                "2xl",
+                "2xs",
+                "3",
+                "3.5",
+                "32",
+                "36",
+                "3xl",
+                "3xs",
+                "4",
+                "40",
+                "44",
+                "48",
+                "4xl",
+                "5",
+                "52",
+                "56",
+                "5xl",
+                "6",
+                "60",
+                "64",
+                "6xl",
+                "7",
+                "72",
+                "7xl",
+                "8",
+                "80",
+                "8xl",
+                "9",
+                "96",
+                "container",
+                "full",
+                "lg",
+                "max",
+                "md",
+                "min",
+                "px",
+                "sm",
+                "xl",
+                "xs"
+            ],
+            "title": "ChakraThemeSizes"
+        },
+        "SizesContainer": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "sm": {
+                    "type": "string"
+                },
+                "md": {
+                    "type": "string"
+                },
+                "lg": {
+                    "type": "string"
+                },
+                "xl": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "lg",
+                "md",
+                "sm",
+                "xl"
+            ],
+            "title": "SizesContainer"
+        },
+        "Space": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "1": {
+                    "type": "string"
+                },
+                "2": {
+                    "type": "string"
+                },
+                "3": {
+                    "type": "string"
+                },
+                "4": {
+                    "type": "string"
+                },
+                "5": {
+                    "type": "string"
+                },
+                "6": {
+                    "type": "string"
+                },
+                "7": {
+                    "type": "string"
+                },
+                "8": {
+                    "type": "string"
+                },
+                "9": {
+                    "type": "string"
+                },
+                "10": {
+                    "type": "string"
+                },
+                "12": {
+                    "type": "string"
+                },
+                "14": {
+                    "type": "string"
+                },
+                "16": {
+                    "type": "string"
+                },
+                "20": {
+                    "type": "string"
+                },
+                "24": {
+                    "type": "string"
+                },
+                "28": {
+                    "type": "string"
+                },
+                "32": {
+                    "type": "string"
+                },
+                "36": {
+                    "type": "string"
+                },
+                "40": {
+                    "type": "string"
+                },
+                "44": {
+                    "type": "string"
+                },
+                "48": {
+                    "type": "string"
+                },
+                "52": {
+                    "type": "string"
+                },
+                "56": {
+                    "type": "string"
+                },
+                "60": {
+                    "type": "string"
+                },
+                "64": {
+                    "type": "string"
+                },
+                "72": {
+                    "type": "string"
+                },
+                "80": {
+                    "type": "string"
+                },
+                "96": {
+                    "type": "string"
+                },
+                "px": {
+                    "type": "string"
+                },
+                "0.5": {
+                    "type": "string"
+                },
+                "1.5": {
+                    "type": "string"
+                },
+                "2.5": {
+                    "type": "string"
+                },
+                "3.5": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "0.5",
+                "1",
+                "1.5",
+                "10",
+                "12",
+                "14",
+                "16",
+                "2",
+                "2.5",
+                "20",
+                "24",
+                "28",
+                "3",
+                "3.5",
+                "32",
+                "36",
+                "4",
+                "40",
+                "44",
+                "48",
+                "5",
+                "52",
+                "56",
+                "6",
+                "60",
+                "64",
+                "7",
+                "72",
+                "8",
+                "80",
+                "9",
+                "96",
+                "px"
+            ],
+            "title": "Space"
+        },
+        "Transition": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "property": {
+                    "$ref": "#/definitions/Property"
+                },
+                "easing": {
+                    "$ref": "#/definitions/Easing"
+                },
+                "duration": {
+                    "$ref": "#/definitions/Duration"
+                }
+            },
+            "required": [
+                "duration",
+                "easing",
+                "property"
+            ],
+            "title": "Transition"
+        },
+        "Duration": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "ultra-fast": {
+                    "type": "string"
+                },
+                "faster": {
+                    "type": "string"
+                },
+                "fast": {
+                    "type": "string"
+                },
+                "normal": {
+                    "type": "string"
+                },
+                "slow": {
+                    "type": "string"
+                },
+                "slower": {
+                    "type": "string"
+                },
+                "ultra-slow": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "fast",
+                "faster",
+                "normal",
+                "slow",
+                "slower",
+                "ultra-fast",
+                "ultra-slow"
+            ],
+            "title": "Duration"
+        },
+        "Easing": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "ease-in": {
+                    "type": "string"
+                },
+                "ease-out": {
+                    "type": "string"
+                },
+                "ease-in-out": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "ease-in",
+                "ease-in-out",
+                "ease-out"
+            ],
+            "title": "Easing"
+        },
+        "Property": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "common": {
+                    "type": "string"
+                },
+                "colors": {
+                    "type": "string"
+                },
+                "dimensions": {
+                    "type": "string"
+                },
+                "position": {
+                    "type": "string"
+                },
+                "background": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "background",
+                "colors",
+                "common",
+                "dimensions",
+                "position"
+            ],
+            "title": "Property"
+        },
+        "ZIndices": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "hide": {
+                    "type": "integer"
+                },
+                "auto": {
+                    "type": "string"
+                },
+                "base": {
+                    "type": "integer"
+                },
+                "docked": {
+                    "type": "integer"
+                },
+                "dropdown": {
+                    "type": "integer"
+                },
+                "sticky": {
+                    "type": "integer"
+                },
+                "banner": {
+                    "type": "integer"
+                },
+                "overlay": {
+                    "type": "integer"
+                },
+                "modal": {
+                    "type": "integer"
+                },
+                "popover": {
+                    "type": "integer"
+                },
+                "skipLink": {
+                    "type": "integer"
+                },
+                "toast": {
+                    "type": "integer"
+                },
+                "tooltip": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "auto",
+                "banner",
+                "base",
+                "docked",
+                "dropdown",
+                "hide",
+                "modal",
+                "overlay",
+                "popover",
+                "skipLink",
+                "sticky",
+                "toast",
+                "tooltip"
+            ],
+            "title": "ZIndices"
+        },
+        "BorderRadius": {
+            "type": "string",
+            "enum": [
+                "md",
+                "sm",
+                "lg",
+                "xs"
+            ],
+            "title": "BorderRadius"
+        }
+    }
+}
