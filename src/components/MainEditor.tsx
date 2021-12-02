@@ -13,9 +13,15 @@ import { theme as initialTheme } from "../theme";
 
 import { filterTheme } from "../services/themeEditor";
 import BasicLayout from "../previews/landing/layouts/landing";
+import { ThemeProvider } from "@chakra-ui/react";
+import { mockEnv } from "../services/environment/environment";
 
+// import { ThemeProvider } from '@emotion/react'
+// 
 export const MainEditor = () => {
-  const [theme, setTheme] = useState(initialTheme);
+  const [theme, setTheme] = useState(Object.assign({}, initialTheme));
+
+  // const changeTheme = (current) => (update) => {setTheme(Object.assign(current, update))}
   return (
     <Box w="full" minH="100vh" bgColor="gray.50" py={{ base: 2, md: 4 }}>
       <Container maxW={{ base: "container.xl", md: "90%" }}>
@@ -27,12 +33,14 @@ export const MainEditor = () => {
             <Heading size="md" mb={3}>
               Editor
             </Heading>
-            <Editor theme={filterTheme(theme) as any} />
+            <Editor theme={filterTheme(theme) as any} onChange={(update) => setTheme((prev) => Object.assign({}, prev, update))} />
           </Box>
           <Box flexGrow={1} bgColor="white" p={6} borderRadius="md">
             <Heading size="md">Preview</Heading>
-            <Box>
-              <BasicLayout />
+            <Box className="builder-preview">
+              <ThemeProvider theme={theme} cssVarsRoot=".builder-preview">
+                <BasicLayout />
+              </ThemeProvider>
             </Box>
           </Box>
         </Stack>

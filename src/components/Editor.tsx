@@ -8,13 +8,18 @@ const schema = makeJSONSchema(raw_schema)
 
 const log = (type) => console.log.bind(console, type);
 
-export const Editor = ({theme}: {theme: ChakraTheme}) => {
+const handleSubmit = (chg) => (e) => {
+  console.log(e);
+  chg(e.formData)
+}
+
+export const Editor = ({theme, onChange}: {theme: ChakraTheme, onChange: (theme: any) => void}) => {
   return (
     <Form
       schema={schema}
       formData={theme}
       onChange={log("changed")}
-      onSubmit={log("submitted")}
+      onSubmit={handleSubmit(onChange)}
       onError={log("errors")}
     />
   );
