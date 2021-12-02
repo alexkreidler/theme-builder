@@ -1,7 +1,10 @@
 import React, {useState} from "react";
-import { Box, Center, Heading, Flex, Stack, Container } from "@chakra-ui/react";
+import { Box, Center, Heading, Flex, Stack, Container, ChakraTheme } from "@chakra-ui/react";
 import { Editor } from "./Editor";
 import {theme as initialTheme} from "../theme"
+
+import {filterTheme} from "../services/themeEditor"
+
 export const MainEditor = () => {
   const [theme, setTheme] = useState(initialTheme)
   return (
@@ -11,7 +14,7 @@ export const MainEditor = () => {
         <Stack direction={{ base: "column", xl: "row" }} spacing={8}>
           <Box flexGrow={1} bgColor="white" p={6} borderRadius="md">
             <Heading size="md" mb={3}>Editor</Heading>
-            <Editor theme={theme}/>
+            <Editor theme={filterTheme(theme) as any}/>
           </Box>
           <Box flexGrow={1} bgColor="white" p={6} borderRadius="md">
             <Heading size="md">Preview</Heading>

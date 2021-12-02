@@ -14,6 +14,7 @@
     "@rjsf/core": "^3.2.1",
     "bootstrap": "^5.1.3",
     "framer-motion": "^4",
+    "lodash": "^4.17.21",
     "next": "latest",
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.3",

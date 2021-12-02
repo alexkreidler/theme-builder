@@ -1,24 +1,6 @@
 {
     "$ref": "#/definitions/CustomChakraTheme",
     "definitions": {
-        "CustomChakraTheme": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-                "fonts": {
-                    "$ref": "#/definitions/Fonts"
-                },
-                "radii": {
-                    "$ref": "#/definitions/Radii"
-                },
-                "blur": {
-                    "$ref": "#/definitions/Blur"
-                },
-                "shadows": {
-                    "$ref": "#/definitions/Shadows"
-                }
-            }
-        },
         "ChakraTheme": {
             "type": "object",
             "additionalProperties": false,
