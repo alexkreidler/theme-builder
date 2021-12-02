@@ -13,4 +13,4 @@ export const theme = extendTheme({ colors, fonts: {
   heading: "Inter"
 } })
 
-console.log("theme", theme);
+// console.log("theme", theme);
