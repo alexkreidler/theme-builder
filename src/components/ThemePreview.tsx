@@ -36,7 +36,7 @@ export const FontPreview = () => {
     <PreviewSection themeKey="Fonts">
       <Stack spacing={6}>
         {Object.entries(theme.fonts).map(([fontFamily, v]) => (
-          <Stack spacing={1}>
+          <Stack key={fontFamily} spacing={1}>
             <Text fontWeight="bold">
               {fontFamily.charAt(0).toUpperCase() + fontFamily.slice(1)}
             </Text>
@@ -51,6 +51,7 @@ export const FontPreview = () => {
             <SimpleGrid minChildWidth={48} mr={8}>
               {alphabet.split("").map((v) => (
                 <Box
+                  key={v}
                   p={4}
                   py={1}
                   display="inline-block"
@@ -69,7 +70,7 @@ export const FontPreview = () => {
             </Text>
             <Stack direction="row" spacing={6}>
               {Object.entries(theme.fontWeights).map(([fontWeight, v]) => (
-                <Box display="inline-block">
+                <Box key={fontWeight} display="inline-block">
                   <Text>{v}</Text>
                   <Text
                     fontFamily={fontFamily}
@@ -88,8 +89,13 @@ export const FontPreview = () => {
   );
 };
 
-const getRealSpace = (realSpace: string) =>
-  parseFloat(realSpace.replace("rem", "").replace("em", "").replace("px", ""));
+const getRealSpace = (realSpace: string) => parseFloat(realSpace); //.replace("rem", "").replace("em", "").replace("px", ""));
+
+const spaces = Object.entries(theme.space).sort((a, b) => {
+  return getRealSpace(a[1]) > getRealSpace(b[1]);
+});
+
+console.log(spaces);
 
 export const SpacingPreview = () => {
   return (
@@ -103,19 +109,15 @@ export const SpacingPreview = () => {
           </Tr>
         </Thead>
         <Tbody>
-          {Object.entries(theme.space)
-            .sort((a, b) => {
-              return getRealSpace(a[1]) > getRealSpace(b[1]);
-            })
-            .map(([spaceName, realSpace]) => (
-              <Tr key={spaceName}>
-                <Th>{spaceName}</Th>
-                <Th>{realSpace}</Th>
-                <Th>
-                  <Box bgColor="blue.100" w={realSpace} h={3}></Box>
-                </Th>
-              </Tr>
-            ))}
+          {spaces.map(([spaceName, realSpace]) => (
+            <Tr key={spaceName}>
+              <Th>{spaceName}</Th>
+              <Th>{realSpace}</Th>
+              <Th>
+                <Box bgColor="blue.100" w={spaceName} h={3}></Box>
+              </Th>
+            </Tr>
+          ))}
         </Tbody>
       </Table>
     </PreviewSection>
@@ -151,7 +153,9 @@ export const ShadowPreview = () => {
 export const BorderPreview = () => {
   return (
     <PreviewSection themeKey="Borders">
-      <Heading size="sm" my={2}>Radii</Heading>
+      <Heading size="sm" my={2}>
+        Radii
+      </Heading>
       <SimpleGrid minChildWidth="15rem" mr={8} spacing={4}>
         {Object.entries(theme.radii).map(([borderKey, v]) => (
           <Box
@@ -165,7 +169,9 @@ export const BorderPreview = () => {
           </Box>
         ))}
       </SimpleGrid>
-      <Heading size="sm" my={2}>Size</Heading>
+      <Heading size="sm" my={2}>
+        Size
+      </Heading>
       <SimpleGrid minChildWidth="15rem" mr={8} spacing={4}>
         {Object.entries(theme.borders).map(([borderKey, v]) => (
           <Box border={borderKey} p={6} borderColor="gray.300" key={borderKey}>
