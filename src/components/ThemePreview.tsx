@@ -122,6 +122,46 @@ export const SpacingPreview = () => {
   );
 };
 
+export const BorderPreview = () => {
+  return (
+    <PreviewSection themeKey="Borders">
+      <SimpleGrid minChildWidth="15rem" mr={8} spacing={4}>
+        {Object.entries(theme.radii).map(([borderKey, v]) => (
+          <Box
+            border="1px solid lightgrey"
+            // bgColor="blue.700"
+            p={6}
+            borderRadius={borderKey}
+            key={borderKey}
+          >
+            {borderKey}
+          </Box>
+        ))}
+      </SimpleGrid>
+    </PreviewSection>
+  );
+};
+
+export const ShadowPreview = () => {
+  return (
+    <PreviewSection themeKey="Shadow">
+      <SimpleGrid minChildWidth="15rem" mr={8} spacing={4} spacingY={12} my={10}>
+        {Object.entries(theme.shadows).map(([shadowKey, v]) => (
+          <Box
+            // border="1px solid lightgrey"
+            borderRadius="md"
+            p={6}
+            shadow={shadowKey}
+            key={shadowKey}
+          >
+            {shadowKey}
+          </Box>
+        ))}
+      </SimpleGrid>
+    </PreviewSection>
+  );
+};
+
 //@ts-ignore
 const alphabet = String.fromCharCode(...Array(123).keys()).slice(65);
 
@@ -132,6 +172,8 @@ export const ThemePreview = () => {
       <Stack>
         <FontPreview />
         <SpacingPreview />
+        <BorderPreview />
+        <ShadowPreview />
         {relevantProperties.map((v) => (
           <PreviewSection key={v} themeKey={v} />
         ))}
