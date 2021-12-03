@@ -9,4 +9,4 @@ export const theme = extendTheme({ colors, fonts: {
   heading: "Inter"
 } }) as ChakraTheme
 
-// console.log("theme", theme);
+console.log("theme", theme);

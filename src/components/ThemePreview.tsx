@@ -122,9 +122,36 @@ export const SpacingPreview = () => {
   );
 };
 
+export const ShadowPreview = () => {
+  return (
+    <PreviewSection themeKey="Shadow">
+      <SimpleGrid
+        minChildWidth="15rem"
+        mr={8}
+        spacing={4}
+        spacingY={12}
+        my={10}
+      >
+        {Object.entries(theme.shadows).map(([shadowKey, v]) => (
+          <Box
+            // border="1px solid lightgrey"
+            borderRadius="md"
+            p={6}
+            shadow={shadowKey}
+            key={shadowKey}
+          >
+            {shadowKey}
+          </Box>
+        ))}
+      </SimpleGrid>
+    </PreviewSection>
+  );
+};
+
 export const BorderPreview = () => {
   return (
     <PreviewSection themeKey="Borders">
+      <Heading size="sm" my={2}>Radii</Heading>
       <SimpleGrid minChildWidth="15rem" mr={8} spacing={4}>
         {Object.entries(theme.radii).map(([borderKey, v]) => (
           <Box
@@ -138,23 +165,11 @@ export const BorderPreview = () => {
           </Box>
         ))}
       </SimpleGrid>
-    </PreviewSection>
-  );
-};
-
-export const ShadowPreview = () => {
-  return (
-    <PreviewSection themeKey="Shadow">
-      <SimpleGrid minChildWidth="15rem" mr={8} spacing={4} spacingY={12} my={10}>
-        {Object.entries(theme.shadows).map(([shadowKey, v]) => (
-          <Box
-            // border="1px solid lightgrey"
-            borderRadius="md"
-            p={6}
-            shadow={shadowKey}
-            key={shadowKey}
-          >
-            {shadowKey}
+      <Heading size="sm" my={2}>Size</Heading>
+      <SimpleGrid minChildWidth="15rem" mr={8} spacing={4}>
+        {Object.entries(theme.borders).map(([borderKey, v]) => (
+          <Box border={borderKey} p={6} borderColor="gray.300" key={borderKey}>
+            {borderKey}
           </Box>
         ))}
       </SimpleGrid>
