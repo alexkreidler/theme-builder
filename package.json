@@ -13,6 +13,7 @@
     "@rjsf/bootstrap-4": "^3.2.1",
     "@rjsf/core": "^3.2.1",
     "bootstrap": "^5.1.3",
+    "chakra-react-select": "^1.3.4",
     "framer-motion": "^4",
     "lodash": "^4.17.21",
     "next": "latest",
