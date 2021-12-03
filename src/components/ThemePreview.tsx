@@ -1,8 +1,8 @@
 import React from "react";
-import { Box, Heading, SimpleGrid, Stack, Text } from "@chakra-ui/react";
+import { Box, Heading, SimpleGrid, Stack, Text, useTheme } from "@chakra-ui/react";
 import { relevantProperties } from "../services/themeEditor";
 import { SharedLayout } from "./SharedLayout";
-import { theme } from "../theme";
+// import { theme } from "../theme";
 import {
   Table,
   Thead,
@@ -22,7 +22,7 @@ export const PreviewSection = ({
   children?: React.ReactNode;
 }) => {
   return (
-    <Box w="full" bgColor="white" p={4} borderRadius="md">
+    <Box w="full" bgColor="white" borderRadius="md">
       <Heading size="sm" color="gray.600" mb={2}>
         {themeKey.toUpperCase()}
       </Heading>
@@ -32,6 +32,7 @@ export const PreviewSection = ({
 };
 
 export const FontPreview = () => {
+  const theme = useTheme()
   return (
     <PreviewSection themeKey="Fonts">
       <Stack spacing={6}>
@@ -91,13 +92,13 @@ export const FontPreview = () => {
 
 const getRealSpace = (realSpace: string) => parseFloat(realSpace); //.replace("rem", "").replace("em", "").replace("px", ""));
 
-const spaces = Object.entries(theme.space).sort((a, b) => {
-  return getRealSpace(a[1]) > getRealSpace(b[1]);
-});
-
-console.log(spaces);
 
 export const SpacingPreview = () => {
+  const theme = useTheme()
+  const spaces = Object.entries(theme.space).sort((a, b) => {
+    return getRealSpace(a[1]) > getRealSpace(b[1]);
+  });
+
   return (
     <PreviewSection themeKey="Spacing">
       <Table size="sm">
@@ -125,6 +126,7 @@ export const SpacingPreview = () => {
 };
 
 export const ShadowPreview = () => {
+  const theme = useTheme()
   return (
     <PreviewSection themeKey="Shadow">
       <SimpleGrid
@@ -151,6 +153,7 @@ export const ShadowPreview = () => {
 };
 
 export const BorderPreview = () => {
+  const theme = useTheme()
   return (
     <PreviewSection themeKey="Borders">
       <Heading size="sm" my={2}>
@@ -188,17 +191,23 @@ const alphabet = String.fromCharCode(...Array(123).keys()).slice(65);
 
 export const ThemePreview = () => {
   return (
+    <Stack spacing={8} mt={6}>
+      <FontPreview />
+      <SpacingPreview />
+      <BorderPreview />
+      <ShadowPreview />
+      {/* {relevantProperties.map((v) => (
+          <PreviewSection key={v} themeKey={v} />
+        ))} */}
+    </Stack>
+  );
+};
+
+export const ThemePreviewPage = () => {
+  return (
     <SharedLayout>
       <Heading mb={4}>Theme Builder Preview</Heading>
-      <Stack>
-        <FontPreview />
-        <SpacingPreview />
-        <BorderPreview />
-        <ShadowPreview />
-        {relevantProperties.map((v) => (
-          <PreviewSection key={v} themeKey={v} />
-        ))}
-      </Stack>
+      <ThemePreview />
     </SharedLayout>
   );
 };

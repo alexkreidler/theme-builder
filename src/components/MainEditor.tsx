@@ -32,7 +32,7 @@ export const MainEditor = () => {
             <Heading size="md" mb={3}>
               Editor
             </Heading>
-            <Editor theme={filterTheme(theme) as any} onChange={handleChange} />
+            <Editor theme={filterTheme(theme) as any} onChange={handleChange} onSubmit={handleChange} />
           </Box>
           <Box flexGrow={1} bgColor="white" p={6} borderRadius="md">
             <Heading size="md">Preview</Heading>
