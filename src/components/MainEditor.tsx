@@ -13,6 +13,7 @@ import { theme as initialTheme } from "../theme";
 
 import { filterTheme } from "../services/themeEditor";
 import { Preview } from "./Preview";
+import { SharedLayout } from "./SharedLayout";
 
 // import { ThemeProvider } from '@emotion/react'
 //
@@ -22,8 +23,7 @@ export const MainEditor = () => {
     setTheme((prev) => Object.assign({}, prev, update));
   // const changeTheme = (current) => (update) => {setTheme(Object.assign(current, update))}
   return (
-    <Box w="full" minH="100vh" bgColor="gray.50" py={{ base: 2, md: 4 }}>
-      <Container maxW={{ base: "container.xl", md: "90%" }}>
+    <SharedLayout>
         <Heading size="md" my={3}>
           Theme Builder
         </Heading>
@@ -39,7 +39,6 @@ export const MainEditor = () => {
             <Preview theme={theme} />
           </Box>
         </Stack>
-      </Container>
-    </Box>
+    </SharedLayout>
   );
 };
