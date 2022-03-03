@@ -4,7 +4,7 @@ import Head from 'next/head'
 import { Footer } from './Footer/Footer'
 import Header from './Header'
 import { Box } from '@chakra-ui/react'
-import { makeGoogleFontsURL } from '../utils/fontLoader'
+import { makeGoogleFontsURL } from '../../../utils/fonts'
 
 type Props = {
   children?: ReactNode

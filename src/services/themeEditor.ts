@@ -12,7 +12,6 @@ export const makeJSONSchema = (o: any) => {
   };
   o.$ref = "#/definitions/ACustomChakraTheme"
   o.$schema = undefined
-  console.log(o);
   
   return o
 };

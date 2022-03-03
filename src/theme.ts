@@ -8,5 +8,3 @@ export const theme = extendTheme({ colors, fonts: {
   body:"Inter",
   heading: "Inter"
 } }) as ChakraTheme
-
-console.log("theme", theme);

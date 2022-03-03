@@ -1,4 +1,4 @@
-import { HeadingProps } from '@chakra-ui/layout'
+import { HeadingProps } from '@chakra-ui/react'
 import { Heading, useColorModeValue } from '@chakra-ui/react'
 import * as React from 'react'
 

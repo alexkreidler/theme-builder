@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Heading, SimpleGrid, Stack, Text, useTheme } from "@chakra-ui/react";
+import { Box, Heading, SimpleGrid, Stack, Text, Theme, useTheme } from "@chakra-ui/react";
 import { relevantProperties } from "../services/themeEditor";
 import { SharedLayout } from "./SharedLayout";
 // import { theme } from "../theme";
@@ -94,9 +94,9 @@ const getRealSpace = (realSpace: string) => parseFloat(realSpace); //.replace("r
 
 
 export const SpacingPreview = () => {
-  const theme = useTheme()
+  const theme: Theme = useTheme()
   const spaces = Object.entries(theme.space).sort((a, b) => {
-    return getRealSpace(a[1]) > getRealSpace(b[1]);
+    return getRealSpace(a[1]) > getRealSpace(b[1]) ? 1 : 0;
   });
 
   return (
