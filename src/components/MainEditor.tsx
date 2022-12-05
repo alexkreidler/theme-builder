@@ -21,6 +21,7 @@ export const MainEditor = () => {
   const [theme, setTheme] = useState(Object.assign({}, initialTheme));
   const handleChange = (update) =>
     setTheme((prev) => Object.assign({}, prev, update));
+  console.log(theme);
   // const changeTheme = (current) => (update) => {setTheme(Object.assign(current, update))}
   return (
     <Box bgColor="gray.50">
